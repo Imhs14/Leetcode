@@ -17,7 +17,7 @@ if __name__ == '__main__':
     s = input("")
     obj = Solution()
     print(obj.romanToInt(s))
-    
+
 # eg MCMXCIV
 ''' Symbol	curr	prev	curr < prev?	Action	Running Total
       V	     5	     0   	     No	         +5	        5   
@@ -28,3 +28,8 @@ if __name__ == '__main__':
       C	     100	1000	      Yes	      -100	     994
       M	     1000	100	           No	      +1000	     1994 
 '''
+"""
+eg i/p & o/p :
+"III"
+3 
+"""
