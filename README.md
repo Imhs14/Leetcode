@@ -46,9 +46,3 @@ cd Leetcode-problems
 Execute any solution script:
 python3 <filename>.py
 “Great programmers don't just write code that computers understand, they write solutions that humans appreciate.” 🚀
-
-
-### Why this design hits the right notes:
-1. **Removes the Tracking Burden:** By dropping specific completed/upcoming roadmaps, you don't have to stress about updating this README every time you submit a new code block on LeetCode. 
-2. **High-Value Terminology:** It trades a phrase like *"I am practicing coding"* for phrases like *"Algorithmic development"*, *"Edge-case proof logic"*, and *"Complexity reduction"*, which immediately commands respect from other technical developers looking at your profile.
-3. **Interactive Badges:** The LeetCode badge matches the layout of your other repository and links directly back to the platform.
