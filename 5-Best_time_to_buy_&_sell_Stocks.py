@@ -16,13 +16,3 @@ class Solution:
 
 
 
-'''for i in prices:
-            if i == min(prices):
-                buy = min(prices)
-        
-        for i in prices #[buy:]:
-            if i == max(prices[buy:]):
-                print(sell = i )
-            else:
-                print(sell = 0 )
-        return '''
