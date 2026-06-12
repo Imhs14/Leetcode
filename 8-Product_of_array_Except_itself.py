@@ -14,3 +14,6 @@ class Solution:
             r_mult *= nums[j]
 
         return [l*r for l,r in zip(l_arr, r_arr)]
+
+# Time complexity = O(n)
+# space complexity = O(n)
