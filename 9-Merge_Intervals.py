@@ -12,3 +12,5 @@ class Solution:
                 result.append(current)
 
         return result
+    # times O(n log n)
+    # space O(n)
