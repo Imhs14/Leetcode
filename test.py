@@ -15,3 +15,19 @@ class Solution:
 
         return len(stack) == 0 # if this is true we return true that means we have successfully popped every element 
                                 # elese false will be returned as there was mis match of the closing brackets or stack was empty
+
+
+# closest to zero 
+class solution:
+    def findclosestnumber(self, num : list[int])-> int:
+        closest = num[0]
+
+        for x in num:
+            if abs(x) < abs(closest):
+                closest = x
+            
+            
+        if closest < 0 and abs(closest) in num:
+            return abs(closest)
+        else:
+            return closest 
