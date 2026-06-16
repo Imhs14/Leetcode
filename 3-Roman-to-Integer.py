@@ -1,3 +1,10 @@
+# LeetCode Problem 13: Roman to Integer
+# URL: https://leetcode.com/problems/roman-to-integer/
+# Difficulty: Easy
+# Category: Math
+# Time Complexity: O(N)
+# Space Complexity: O(1)
+
 class Solution:
     def romanToInt(self, s: str) -> int:
         val = {'I': 1, 'V': 5, 'X': 10, 'L': 50,

@@ -1,3 +1,10 @@
+# LeetCode Problem 238: Product of Array Except Self
+# URL: https://leetcode.com/problems/product-of-array-except-self/
+# Difficulty: Medium
+# Category: Arrays & Hashing
+# Time Complexity: O(N)
+# Space Complexity: O(1)
+
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
         l_mult = 1

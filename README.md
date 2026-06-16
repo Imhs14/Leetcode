@@ -34,6 +34,43 @@ The scripts contained in this repository explore fundamental paradigms across ba
 
 ---
 
+## 📊 Progress Dashboard
+
+<!-- PROGRESS_STATS_START -->
+
+| Category | Progress | Count |
+| :--- | :--- | :---: |
+| **Total Solved** | `[████████████████░░░░]` 84.6% (11/13) | **11/13** |
+| **Easy** | `[█████████████████░░░]` 88.9% (8/9) | **8/9** |
+| **Medium** | `[███████████████░░░░░]` 75.0% (3/4) | **3/4** |
+| **Hard** |  | **0/0** |
+
+<!-- PROGRESS_STATS_END -->
+
+## 🧩 Solved Problems
+
+<!-- PROBLEMS_TABLE_START -->
+
+| # | Problem Number | Title | Difficulty | Category | Time | Space | Status | Solution Link |
+| :-: | :-: | :--- | :-: | :--- | :-: | :-: | :-: | :-: |
+| 1 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/find-closest-number-to-zero/) | 🟢 Easy | Arrays & Hashing | `O(N)` | `O(1)` | ✅ Complete | [Solution](./1-Closest-num-to-zero.py) |
+| 2 | 1768 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | 🟢 Easy | Two Pointers | `O(N + M)` | `O(N + M)` | ✅ Complete | [Solution](./2-merge-string-alternately.py) |
+| 3 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | 🟢 Easy | Math | `O(N)` | `O(1)` | ✅ Complete | [Solution](./3-Roman-to-Integer.py) |
+| 4 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | 🟢 Easy | Two Pointers | `O(T)` | `O(1)` | ✅ Complete | [Solution](./4-IsSubsequence.py) |
+| 5 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟢 Easy | Sliding Window | `O(N)` | `O(1)` | ✅ Complete | [Solution](./5-Best_time_to_buy_&_sell_Stocks.py) |
+| 5 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy | Arrays & Hashing | `O(N)` | `O(N)` | 🚧 Skeleton | [Solution](./5-Two_sum.py) |
+| 6 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | 🟢 Easy | Strings | `O(N * M)` | `O(1)` | ✅ Complete | [Solution](./6-Longest_common_prefix.py) |
+| 7 | 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | 🟢 Easy | Arrays | `O(N)` | `O(N)` | ✅ Complete | [Solution](./7-Summary_Ranges.py) |
+| 8 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟡 Medium | Arrays & Hashing | `O(N)` | `O(1)` | ✅ Complete | [Solution](./8-Product_of_array_Except_itself.py) |
+| 9 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟡 Medium | Sorting | `O(N log N)` | `O(N)` | ✅ Complete | [Solution](./9-Merge_Intervals.py) |
+| 10 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟡 Medium | Matrices | `O(M * N)` | `O(1)` | ✅ Complete | [Solution](./10-Sprial_matrix.py) |
+| 11 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟡 Medium | Matrices | `O(N^2)` | `O(1)` | 🚧 Skeleton | [Solution](./11-Rotate_image.py) |
+| 12 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | Stacks | `O(N)` | `O(N)` | ✅ Complete | [Solution](./12-Valid_parenthesis.py) |
+
+<!-- PROBLEMS_TABLE_END -->
+
+---
+
 ## 🛠️ Running the Scripts Locally
 
 Each file is isolated, self-contained, and can be executed directly via any terminal or Python environment. 

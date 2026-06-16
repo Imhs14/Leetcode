@@ -1,3 +1,10 @@
+# LeetCode Problem 56: Merge Intervals
+# URL: https://leetcode.com/problems/merge-intervals/
+# Difficulty: Medium
+# Category: Sorting
+# Time Complexity: O(N log N)
+# Space Complexity: O(N)
+
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:
         intervals.sort(key = lambda interval : interval[0])

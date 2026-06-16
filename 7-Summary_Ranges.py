@@ -1,3 +1,10 @@
+# LeetCode Problem 228: Summary Ranges
+# URL: https://leetcode.com/problems/summary-ranges/
+# Difficulty: Easy
+# Category: Arrays
+# Time Complexity: O(N)
+# Space Complexity: O(N)
+
 class Solution:
     def summaryRanges(self, nums: List[int]) -> List[str]:
         ans = []

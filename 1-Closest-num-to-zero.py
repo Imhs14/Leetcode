@@ -1,4 +1,11 @@
-class solution:
+# LeetCode Problem 2239: Find Closest Number to Zero
+# URL: https://leetcode.com/problems/find-closest-number-to-zero/
+# Difficulty: Easy
+# Category: Arrays & Hashing
+# Time Complexity: O(N)
+# Space Complexity: O(1)
+
+class Solution:
     def findclosestnumber(self, num : list[int])-> int:
         closest  = num[0]
         for x in num:

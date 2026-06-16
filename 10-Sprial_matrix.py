@@ -1,3 +1,10 @@
+# LeetCode Problem 54: Spiral Matrix
+# URL: https://leetcode.com/problems/spiral-matrix/
+# Difficulty: Medium
+# Category: Matrices
+# Time Complexity: O(M * N)
+# Space Complexity: O(1)
+
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         result = []

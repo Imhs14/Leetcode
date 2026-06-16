@@ -1,3 +1,10 @@
+# LeetCode Problem 1768: Merge Strings Alternately
+# URL: https://leetcode.com/problems/merge-strings-alternately/
+# Difficulty: Easy
+# Category: Two Pointers
+# Time Complexity: O(N + M)
+# Space Complexity: O(N + M)
+
 class Solution:
     def mergeAlternately(self, word1: str , word2: str)-> str:
         A, B = len(word1), len(word2)

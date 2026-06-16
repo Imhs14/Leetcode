@@ -1,3 +1,10 @@
+# LeetCode Problem 20: Valid Parentheses
+# URL: https://leetcode.com/problems/valid-parentheses/
+# Difficulty: Easy
+# Category: Stacks
+# Time Complexity: O(N)
+# Space Complexity: O(N)
+
 class Solution:
     def isValid(self, s: str) -> bool:
         # Mapping of closing bracket to opening bracket
