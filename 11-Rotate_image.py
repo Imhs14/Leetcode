@@ -8,8 +8,17 @@
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:
         # Do not return anything, modify matrix in-place instead.
-        pass
-    
+        n = len(matrix)
+        # Transpose 
+        for i in range(n):
+            for j in range(i + 1 , n):
+                matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
+
+        # Reflection 
+        for i in range(n):
+            for j in range(n // 2):
+                matrix[i][j], matrix[i][j - n - 1] = matrix[i][j - n - 1], matrix[i][j]
+
 if __name__ == '__main__':
     # 1. Ask for the number of rows
     rows = int(input("Enter the number of rows: "))
