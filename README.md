@@ -66,7 +66,7 @@ The scripts contained in this repository explore fundamental paradigms across ba
 | 10 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟡 Medium | Matrices | `O(M * N)` | `O(1)` | ✅ Complete | [Solution](./10-Sprial_matrix.py) |
 | 11 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟡 Medium | Matrices | `O(N^2)` | `O(1)` | ✅ Complete | [Solution](./11-Rotate_image.py) |
 | 12 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | Stacks | `O(N)` | `O(N)` | ✅ Complete | [Solution](./12-Valid_parenthesis.py) |
-| 13 | N/A | Remove Duplicates From Sorted Array | 🟢 Easy | Unknown | `O(N)` | `O(1)` | ✅ Complete | [Solution](./13-Remove_duplicates_from_sorted_array.py) |
+| 13 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 🟢 Easy | Two Pointers | `O(N)` | `O(1)` | ✅ Complete | [Solution](./13-Remove_duplicates_from_sorted_array.py) |
 
 <!-- PROBLEMS_TABLE_END -->
 

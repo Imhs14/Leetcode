@@ -1,3 +1,12 @@
+# LeetCode Problem 26: Remove Duplicates from Sorted Array
+# URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
+# Difficulty: Easy
+# Category: Two Pointers
+# Time Complexity: O(N)
+# Space Complexity: O(1)
+
+from typing import List
+
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         i = 1

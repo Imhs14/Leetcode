@@ -158,6 +158,15 @@ DEFAULT_METADATA = {
         "link": "https://leetcode.com/problems/valid-parentheses/",
         "time": "O(N)",
         "space": "O(N)"
+    },
+    "13-Remove_duplicates_from_sorted_array.py": {
+        "number": "26",
+        "title": "Remove Duplicates from Sorted Array",
+        "difficulty": "Easy",
+        "category": "Two Pointers",
+        "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
+        "time": "O(N)",
+        "space": "O(1)"
     }
 }
 
@@ -224,6 +233,10 @@ DEFAULT_TESTS = {
         (("(]",), False),
         (("([)]",), False),
         (("{[]}",), True)
+    ],
+    "13-Remove_duplicates_from_sorted_array.py": [
+        (([1, 1, 2],), 2),
+        (([0, 0, 1, 1, 1, 2, 2, 3, 3, 4],), 5)
     ]
 }
 
@@ -284,6 +297,10 @@ def gen_parentheses(n: int) -> tuple:
     # Generate balanced brackets
     return ("[" * (n // 2) + "]" * (n // 2),)
 
+def gen_sorted_array(n: int) -> tuple:
+    import random
+    return (sorted([random.randint(-1000, 1000) for _ in range(n)]),)
+
 INPUT_GENERATORS = {
     "1-Closest-num-to-zero.py": gen_array,
     "2-merge-string-alternately.py": gen_two_strings,
@@ -297,7 +314,8 @@ INPUT_GENERATORS = {
     "9-Merge_Intervals.py": gen_intervals,
     "10-Sprial_matrix.py": gen_matrix,
     "11-Rotate_image.py": gen_matrix,
-    "12-Valid_parenthesis.py": gen_parentheses
+    "12-Valid_parenthesis.py": gen_parentheses,
+    "13-Remove_duplicates_from_sorted_array.py": gen_sorted_array
 }
 
 # ==============================================================================
