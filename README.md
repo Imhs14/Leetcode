@@ -40,8 +40,8 @@ The scripts contained in this repository explore fundamental paradigms across ba
 
 | Category | Progress | Count |
 | :--- | :--- | :---: |
-| **Total Solved** | `[██████████████████░░]` 92.9% (13/14) | **13/14** |
-| **Easy** | `[██████████████████░░]` 90.0% (9/10) | **9/10** |
+| **Total Solved** | `[██████████████████░░]` 93.3% (14/15) | **14/15** |
+| **Easy** | `[██████████████████░░]` 90.9% (10/11) | **10/11** |
 | **Medium** | `[████████████████████]` 100.0% (4/4) | **4/4** |
 | **Hard** |  | **0/0** |
 
@@ -67,6 +67,7 @@ The scripts contained in this repository explore fundamental paradigms across ba
 | 11 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟡 Medium | Matrices | `O(N^2)` | `O(1)` | ✅ Complete | [Solution](./11-Rotate_image.py) |
 | 12 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | Stacks | `O(N)` | `O(N)` | ✅ Complete | [Solution](./12-Valid_parenthesis.py) |
 | 13 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 🟢 Easy | Two Pointers | `O(N)` | `O(1)` | ✅ Complete | [Solution](./13-Remove_duplicates_from_sorted_array.py) |
+| 14 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | Strings | `O(N * M)` | `O(1)` | ✅ Complete | [Solution](./14-Find_the_Index_of_the_First_Occurrence_in_a_String.py) |
 
 <!-- PROBLEMS_TABLE_END -->
 

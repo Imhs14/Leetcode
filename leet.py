@@ -167,6 +167,15 @@ DEFAULT_METADATA = {
         "link": "https://leetcode.com/problems/remove-duplicates-from-sorted-array/",
         "time": "O(N)",
         "space": "O(1)"
+    },
+    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": {
+        "number": "28",
+        "title": "Find the Index of the First Occurrence in a String",
+        "difficulty": "Easy",
+        "category": "Strings",
+        "link": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
+        "time": "O(N * M)",
+        "space": "O(1)"
     }
 }
 
@@ -237,6 +246,10 @@ DEFAULT_TESTS = {
     "13-Remove_duplicates_from_sorted_array.py": [
         (([1, 1, 2],), 2),
         (([0, 0, 1, 1, 1, 2, 2, 3, 3, 4],), 5)
+    ],
+    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": [
+        (("sadbutsad", "sad"), 0),
+        (("leetcode", "leeto"), -1)
     ]
 }
 
@@ -315,7 +328,8 @@ INPUT_GENERATORS = {
     "10-Sprial_matrix.py": gen_matrix,
     "11-Rotate_image.py": gen_matrix,
     "12-Valid_parenthesis.py": gen_parentheses,
-    "13-Remove_duplicates_from_sorted_array.py": gen_sorted_array
+    "13-Remove_duplicates_from_sorted_array.py": gen_sorted_array,
+    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": gen_two_strings
 }
 
 # ==============================================================================
