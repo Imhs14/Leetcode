@@ -176,6 +176,15 @@ DEFAULT_METADATA = {
         "link": "https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/",
         "time": "O(N * M)",
         "space": "O(1)"
+    },
+    "15-Check_good_integer.py": {
+        "number": "N/A",
+        "title": "Check Good Integer",
+        "difficulty": "Easy",
+        "category": "Math",
+        "link": "",
+        "time": "O(D)",
+        "space": "O(D)"
     }
 }
 
@@ -250,6 +259,11 @@ DEFAULT_TESTS = {
     "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": [
         (("sadbutsad", "sad"), 0),
         (("leetcode", "leeto"), -1)
+    ],
+    "15-Check_good_integer.py": [
+        ((99,), True),
+        ((12345,), False),
+        ((12,), False)
     ]
 }
 
@@ -314,6 +328,10 @@ def gen_sorted_array(n: int) -> tuple:
     import random
     return (sorted([random.randint(-1000, 1000) for _ in range(n)]),)
 
+def gen_large_integer(n: int) -> tuple:
+    import random
+    return (int("".join(str(random.randint(1, 9)) for _ in range(max(1, n)))),)
+
 INPUT_GENERATORS = {
     "1-Closest-num-to-zero.py": gen_array,
     "2-merge-string-alternately.py": gen_two_strings,
@@ -329,7 +347,8 @@ INPUT_GENERATORS = {
     "11-Rotate_image.py": gen_matrix,
     "12-Valid_parenthesis.py": gen_parentheses,
     "13-Remove_duplicates_from_sorted_array.py": gen_sorted_array,
-    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": gen_two_strings
+    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": gen_two_strings,
+    "15-Check_good_integer.py": gen_large_integer
 }
 
 # ==============================================================================

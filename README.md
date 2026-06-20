@@ -40,8 +40,8 @@ The scripts contained in this repository explore fundamental paradigms across ba
 
 | Category | Progress | Count |
 | :--- | :--- | :---: |
-| **Total Solved** | `[██████████████████░░]` 93.3% (14/15) | **14/15** |
-| **Easy** | `[██████████████████░░]` 90.9% (10/11) | **10/11** |
+| **Total Solved** | `[█████████████████░░░]` 88.2% (15/17) | **15/17** |
+| **Easy** | `[████████████████░░░░]` 84.6% (11/13) | **11/13** |
 | **Medium** | `[████████████████████]` 100.0% (4/4) | **4/4** |
 | **Hard** |  | **0/0** |
 
@@ -68,6 +68,8 @@ The scripts contained in this repository explore fundamental paradigms across ba
 | 12 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | Stacks | `O(N)` | `O(N)` | ✅ Complete | [Solution](./12-Valid_parenthesis.py) |
 | 13 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 🟢 Easy | Two Pointers | `O(N)` | `O(1)` | ✅ Complete | [Solution](./13-Remove_duplicates_from_sorted_array.py) |
 | 14 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | Strings | `O(N * M)` | `O(1)` | ✅ Complete | [Solution](./14-Find_the_Index_of_the_First_Occurrence_in_a_String.py) |
+| 15 | N/A | Check Good Integer | 🟢 Easy | Math | `O(D)` | `O(D)` | ✅ Complete | [Solution](./15-Check_good_integer.py) |
+| 999 | N/A | Test1 | 🟢 Easy | Unknown | `O(N)` | `O(1)` | 🚧 Skeleton | [Solution](./test1.py) |
 
 <!-- PROBLEMS_TABLE_END -->
 

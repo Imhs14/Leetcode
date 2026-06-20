@@ -1,3 +1,10 @@
+# LeetCode Problem N/A: Check Good Integer
+# URL: 
+# Difficulty: Easy
+# Category: Math
+# Time Complexity: O(D)
+# Space Complexity: O(D)
+
 class Solution:
     def checkGoodInteger(self, n: int) -> bool:
         dig_sum, sq_sum = 0, 0
