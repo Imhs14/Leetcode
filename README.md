@@ -40,7 +40,7 @@ The scripts contained in this repository explore fundamental paradigms across ba
 
 | Category | Progress | Count |
 | :--- | :--- | :---: |
-| **Total Solved** | `[█████████████████░░░]` 88.2% (15/17) | **15/17** |
+| **Total Solved** | `[█████████████████░░░]` 88.2% (15/16) | **15/16** |
 | **Easy** | `[████████████████░░░░]` 84.6% (11/13) | **11/13** |
 | **Medium** | `[████████████████████]` 100.0% (4/4) | **4/4** |
 | **Hard** |  | **0/0** |
