@@ -68,8 +68,7 @@ The scripts contained in this repository explore fundamental paradigms across ba
 | 12 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | Stacks | `O(N)` | `O(N)` | ✅ Complete | [Solution](./12-Valid_parenthesis.py) |
 | 13 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 🟢 Easy | Two Pointers | `O(N)` | `O(1)` | ✅ Complete | [Solution](./13-Remove_duplicates_from_sorted_array.py) |
 | 14 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | Strings | `O(N * M)` | `O(1)` | ✅ Complete | [Solution](./14-Find_the_Index_of_the_First_Occurrence_in_a_String.py) |
-| 15 | N/A | Check Good Integer | 🟢 Easy | Math | `O(D)` | `O(D)` | ✅ Complete | [Solution](./15-Check_good_integer.py) |
-| 999 | N/A | Test1 | 🟢 Easy | Unknown | `O(N)` | `O(1)` | 🚧 Skeleton | [Solution](./test1.py) |
+| 15 | 3959 | [Check Good Integer](https://leetcode.com/problems/check-good-integer/?envType=problem-list-v2&envId=wpb3lnsi) | 🟢 Easy | Math | `O(D)` | `O(D)` | ✅ Complete | [Solution](./15-Check_good_integer.py) |
 
 <!-- PROBLEMS_TABLE_END -->
 
