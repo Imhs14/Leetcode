@@ -36,7 +36,7 @@ The scripts contained in this repository explore fundamental paradigms across ba
 
 ## 📊 Progress Dashboard
 
-\1
+<!-- PROGRESS_STATS_START -->
 <p align="center">
   <img src="./leetcode_stats.svg" alt="LeetCode Stats" />
 </p>
