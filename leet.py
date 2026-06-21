@@ -23,16 +23,6 @@ except ImportError:
     print("Please install it by running: pip install rich")
     sys.exit(1)
 
-# Configure non-interactive backend for matplotlib if benchmarking is used
-HAS_MATPLOTLIB = False
-try:
-    import matplotlib
-    matplotlib.use('Agg')  # Headless/safe backend
-    import matplotlib.pyplot as plt
-    import numpy as np
-    HAS_MATPLOTLIB = True
-except ImportError:
-    pass
 
 # Initialize Rich Console
 console = Console()
@@ -186,169 +176,6 @@ DEFAULT_METADATA = {
         "time": "O(D)",
         "space": "O(D)"
     }
-}
-
-# ==============================================================================
-# DEFAULT TEST CASES (For automated execution)
-# ==============================================================================
-DEFAULT_TESTS = {
-    "1-Closest-num-to-zero.py": [
-        (([-4, -2, 1, 4, 8],), 1),
-        (([2, -1, 1],), 1),
-        (([2, 7, 8, -2],), 2)
-    ],
-    "2-merge-string-alternately.py": [
-        (("abc", "pqr"), "apbqcr"),
-        (("ab", "rs"), "arbs"),
-        (("abcd", "pq"), "apbqcd")
-    ],
-    "3-Roman-to-Integer.py": [
-        (("III",), 3),
-        (("LVIII",), 58),
-        (("MCMXCIV",), 1994)
-    ],
-    "4-IsSubsequence.py": [
-        (("abc", "ahbgdc"), True),
-        (("axc", "ahbgdc"), False)
-    ],
-    "5-Best_time_to_buy_&_sell_Stocks.py": [
-        (([7, 1, 5, 3, 6, 4],), 5),
-        (([7, 6, 4, 3, 1],), 0)
-    ],
-    "5-Two_sum.py": [
-        (([2, 7, 11, 15], 9), [0, 1]),
-        (([3, 2, 4], 6), [1, 2]),
-        (([3, 3], 6), [0, 1])
-    ],
-    "6-Longest_common_prefix.py": [
-        ((["flower", "flow", "flight"],), "fl"),
-        ((["dog", "racecar", "car"],), "")
-    ],
-    "7-Summary_Ranges.py": [
-        (([0, 1, 2, 4, 5, 7],), ["0->2", "4->5", "7"]),
-        (([0, 2, 3, 4, 6, 8, 9],), ["0", "2->4", "6", "8->9"])
-    ],
-    "8-Product_of_array_Except_itself.py": [
-        (([1, 2, 3, 4],), [24, 12, 8, 6]),
-        (([-1, 1, 0, -3, 3],), [0, 0, 9, 0, 0])
-    ],
-    "9-Merge_Intervals.py": [
-        (([[1, 3], [2, 6], [8, 10], [15, 18]],), [[1, 6], [8, 10], [15, 18]]),
-        (([[1, 4], [4, 5]],), [[1, 5]])
-    ],
-    "10-Sprial_matrix.py": [
-        (([[1, 2, 3], [4, 5, 6], [7, 8, 9]],), [1, 2, 3, 6, 9, 8, 7, 4, 5]),
-        (([[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]],), [1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7])
-    ],
-    "11-Rotate_image.py": [
-        (([[1, 2, 3], [4, 5, 6], [7, 8, 9]],), [[7, 4, 1], [8, 5, 2], [9, 6, 3]]),
-        (([[5, 1, 9, 11], [2, 4, 8, 10], [13, 3, 6, 7], [15, 14, 12, 16]],),
-          [[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 10, 11]])
-    ],
-    "12-Valid_parenthesis.py": [
-        (("()",), True),
-        (("()[]{}",), True),
-        (("(]",), False),
-        (("([)]",), False),
-        (("{[]}",), True)
-    ],
-    "13-Remove_duplicates_from_sorted_array.py": [
-        (([1, 1, 2],), 2),
-        (([0, 0, 1, 1, 1, 2, 2, 3, 3, 4],), 5)
-    ],
-    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": [
-        (("sadbutsad", "sad"), 0),
-        (("leetcode", "leeto"), -1)
-    ],
-    "15-Check_good_integer.py": [
-        ((99,), True),
-        ((12345,), False),
-        ((12,), False)
-    ]
-}
-
-# ==============================================================================
-# INPUT GENERATORS FOR BENCHMARKING
-# ==============================================================================
-def gen_array(n: int) -> tuple:
-    import random
-    return ([random.randint(-1000, 1000) for _ in range(n)],)
-
-def gen_two_strings(n: int) -> tuple:
-    import random
-    chars = "abcdefghijklmnopqrstuvwxyz"
-    return ("".join(random.choices(chars, k=n)), "".join(random.choices(chars, k=n)))
-
-def gen_roman(n: int) -> tuple:
-    # Just scale the length of Roman numeral representation
-    return ("M" * (n // 1000) + "D" * ((n % 1000) // 500) + "C" * ((n % 500) // 100) + "L" * ((n % 100) // 50) + "X" * ((n % 50) // 10) + "V" * ((n % 10) // 5) + "I" * (n % 5),)
-
-def gen_subsequence(n: int) -> tuple:
-    import random
-    chars = "abcdefghijklmnopqrstuvwxyz"
-    t = "".join(random.choices(chars, k=n))
-    s = "".join(t[i] for i in sorted(random.sample(range(n), max(1, n // 10))))
-    return (s, t)
-
-def gen_prices(n: int) -> tuple:
-    import random
-    return ([random.randint(1, 1000) for _ in range(n)],)
-
-def gen_two_sum(n: int) -> tuple:
-    import random
-    nums = list(range(1, n + 1))
-    target = n + n - 1
-    return (nums, target)
-
-def gen_string_list(n: int) -> tuple:
-    # Generates strings with a common prefix
-    return (["prefix_" + str(i) + "_" + "a" * (n // 10) for i in range(10)],)
-
-def gen_intervals(n: int) -> tuple:
-    import random
-    intervals = []
-    for _ in range(n):
-        start = random.randint(1, 2 * n)
-        end = start + random.randint(1, 10)
-        intervals.append([start, end])
-    return (intervals,)
-
-def gen_matrix(n: int) -> tuple:
-    # Generates a matrix of size sqrt(n) x sqrt(n)
-    import math
-    size = max(1, int(math.sqrt(n)))
-    matrix = [[i * size + j for j in range(size)] for i in range(size)]
-    return (matrix,)
-
-def gen_parentheses(n: int) -> tuple:
-    # Generate balanced brackets
-    return ("[" * (n // 2) + "]" * (n // 2),)
-
-def gen_sorted_array(n: int) -> tuple:
-    import random
-    return (sorted([random.randint(-1000, 1000) for _ in range(n)]),)
-
-def gen_large_integer(n: int) -> tuple:
-    import random
-    return (int("".join(str(random.randint(1, 9)) for _ in range(max(1, n)))),)
-
-INPUT_GENERATORS = {
-    "1-Closest-num-to-zero.py": gen_array,
-    "2-merge-string-alternately.py": gen_two_strings,
-    "3-Roman-to-Integer.py": gen_roman,
-    "4-IsSubsequence.py": gen_subsequence,
-    "5-Best_time_to_buy_&_sell_Stocks.py": gen_prices,
-    "5-Two_sum.py": gen_two_sum,
-    "6-Longest_common_prefix.py": gen_string_list,
-    "7-Summary_Ranges.py": gen_array,
-    "8-Product_of_array_Except_itself.py": gen_array,
-    "9-Merge_Intervals.py": gen_intervals,
-    "10-Sprial_matrix.py": gen_matrix,
-    "11-Rotate_image.py": gen_matrix,
-    "12-Valid_parenthesis.py": gen_parentheses,
-    "13-Remove_duplicates_from_sorted_array.py": gen_sorted_array,
-    "14-Find_the_Index_of_the_First_Occurrence_in_a_String.py": gen_two_strings,
-    "15-Check_good_integer.py": gen_large_integer
 }
 
 # ==============================================================================
@@ -658,341 +485,25 @@ if __name__ == '__main__':
         
     console.print(f"[bold green]Created problem scaffold: [link=file://{filepath}]{filename}[/link][/bold green]")
 
-def run_tests(directory: str, target_filename: Optional[str] = None):
-    problems = scan_problems(directory)
-    
-    if not target_filename:
-        # Prompt for problem
-        choices = [p.filename for p in problems]
-        if not choices:
-            console.print("[yellow]No problems found in directory.[/yellow]")
-            return
-        target_filename = Prompt.ask("Select problem to test", choices=choices)
-        
-    prob = next((p for p in problems if p.filename == target_filename), None)
-    if not prob:
-        console.print(f"[bold red]Problem file {target_filename} not found.[/bold red]")
-        return
-        
-    console.print(Panel(f"[bold cyan]Running Tests for LeetCode {prob.number or 'N/A'}: {prob.title}[/bold cyan]\nFile: {prob.filename}"))
-    
-    try:
-        # Load class dynamically
-        solution_cls = load_solution_class(prob.filepath)
-    except Exception as e:
-        console.print(f"[bold red]Failed to load solution class: {e}[/bold red]")
-        return
-        
-    # Get methods
-    instance = solution_cls()
-    methods = [m for m in dir(solution_cls) if not m.startswith('__') and callable(getattr(solution_cls, m))]
-    
-    if not methods:
-        console.print("[bold red]No solution method found in Class.[/bold red]")
-        return
-        
-    method_name = methods[0]  # Take first method
-    method = getattr(instance, method_name)
-    
-    # Locate test cases: Check file definitions or default database
-    test_cases = []
-    
-    # Let's inspect module variables for a 'tests' object using AST parsing to prevent running top-level input() calls
-    try:
-        with open(prob.filepath, 'r') as f:
-            code_text = f.read()
-        tree = ast.parse(code_text)
-        for node in tree.body:
-            if isinstance(node, ast.Assign):
-                for target in node.targets:
-                    if isinstance(target, ast.Name) and target.id == 'tests':
-                        # Compile and execute only this assignment node
-                        stmt = ast.Module(body=[node], type_ignores=[])
-                        code = compile(stmt, filename='<ast>', mode='exec')
-                        local_ns = {}
-                        exec(code, {}, local_ns)
-                        if 'tests' in local_ns and isinstance(local_ns['tests'], list):
-                            test_cases = local_ns['tests']
-                            console.print("[green]✓ Loaded custom test cases defined in file.[/green]")
-                            break
-    except Exception:
-        pass
-        
-    # Fallback: Read comments to parse I/O test cases
-    if not test_cases:
-        try:
-            with open(prob.filepath, 'r') as f:
-                content = f.read()
-            # Look for block comments containing tests
-            # Matches: I/P-O/P : \n input_val \n output_val
-            match = re.search(r'(I/P-O/P|i/p & o/p|input & output)\s*:\s*\n\s*(.+?)\n\s*(.+?)\n', content, re.IGNORECASE)
-            if match:
-                inp_str = match.group(2).strip()
-                out_str = match.group(3).strip()
-                
-                # Format arguments depending on signature
-                sig = inspect.signature(method)
-                params_count = len(sig.parameters)
-                
-                # Split inputs by space or parse as python literals
-                try:
-                    # Try safety parse
-                    parsed_inp = ast.literal_eval(inp_str)
-                    parsed_out = ast.literal_eval(out_str)
-                except Exception:
-                    # Treat as simple space-separated strings
-                    parts = inp_str.split()
-                    if params_count == 1:
-                        parsed_inp = (inp_str,)
-                    else:
-                        parsed_inp = tuple(parts[:params_count])
-                    parsed_out = out_str
-                
-                # Wrap parsed input in a tuple if it isn't one
-                if not isinstance(parsed_inp, tuple):
-                    parsed_inp = (parsed_inp,)
-                
-                test_cases = [(parsed_inp, parsed_out)]
-                console.print("[green]✓ Extracted fallback test case from comments.[/green]")
-        except Exception:
-            pass
-
-    # Fallback to default pre-coded tests
-    if not test_cases and prob.filename in DEFAULT_TESTS:
-        test_cases = DEFAULT_TESTS[prob.filename]
-        console.print("[cyan]ℹ Loaded standard built-in test cases for this problem.[/cyan]")
-        
-    if not test_cases:
-        console.print("[yellow]⚠ No test cases found in file, comments, or built-in registry.[/yellow]")
-        # Prompt user for manual inputs
-        sig = inspect.signature(method)
-        params = sig.parameters
-        manual_inputs = []
-        
-        console.print("\n[bold]Enter test values manually:[/bold]")
-        for name, param in params.items():
-            val_str = Prompt.ask(f"Argument '{name}'")
-            try:
-                # Safely parse list, dict, integer etc.
-                val = ast.literal_eval(val_str)
-            except Exception:
-                # Keep as string
-                val = val_str
-            manual_inputs.append(val)
-            
-        test_cases = [(tuple(manual_inputs), None)]
-
-    # Run tests
-    console.print("\n[bold cyan]Executing test suite...[/bold cyan]\n")
-    all_passed = True
-    
-    for idx, (inputs, expected) in enumerate(test_cases, 1):
-        # We need to copy inputs if they are lists/dicts to check in-place changes later
-        import copy
-        inputs_copy = copy.deepcopy(inputs)
-        
-        start_time = time.perf_counter()
-        try:
-            # Execute method
-            res = method(*inputs_copy)
-            elapsed = (time.perf_counter() - start_time) * 1000 # milliseconds
-            
-            # Check in-place modification
-            is_inplace = getattr(prob, 'in_place', False) or (res is None and expected is not None)
-            actual_res = inputs_copy[0] if is_inplace else res
-            
-            # Comparison check
-            if expected is None:
-                console.print(f"[bold cyan]Manual Test {idx}:[/bold cyan] Input: {inputs} | Output: [bold green]{actual_res}[/bold green] (Executed in {elapsed:.3f}ms)")
-            else:
-                passed = actual_res == expected
-                status_str = "[bold green]PASS[/bold green]" if passed else "[bold red]FAIL[/bold red]"
-                if not passed:
-                    all_passed = False
-                    
-                console.print(f"[bold]Test {idx}:[/bold] {status_str}")
-                console.print(f"  Inputs:   {inputs}")
-                console.print(f"  Expected: {expected}")
-                console.print(f"  Actual:   {actual_res}")
-                console.print(f"  Time:     {elapsed:.3f} ms\n")
-        except Exception as e:
-            elapsed = (time.perf_counter() - start_time) * 1000
-            console.print(f"[bold]Test {idx}:[/bold] [bold red]CRASH[/bold red]")
-            console.print(f"  Inputs:   {inputs}")
-            console.print(f"  Error:    {e}")
-            console.print(f"  Time:     {elapsed:.3f} ms\n")
-            all_passed = False
-            
-    if all_passed and expected is not None:
-        console.print("[bold green]🎉 All tests passed successfully![/bold green]")
-    elif not all_passed:
-        console.print("[bold red]❌ Some tests failed or crashed. Check details above.[/bold red]")
-
-def benchmark_solution(directory: str, target_filename: Optional[str] = None):
-    if not HAS_MATPLOTLIB:
-        console.print("[bold red]Error: Matplotlib is not available. Install it with: pip install matplotlib numpy[/bold red]")
-        return
-        
-    problems = scan_problems(directory)
-    if not target_filename:
-        choices = [p.filename for p in problems]
-        if not choices:
-            console.print("[yellow]No problems found.[/yellow]")
-            return
-        target_filename = Prompt.ask("Select problem to benchmark", choices=choices)
-        
-    prob = next((p for p in problems if p.filename == target_filename), None)
-    if not prob:
-        console.print(f"[bold red]Problem file {target_filename} not found.[/bold red]")
-        return
-        
-    # Check if we have an input generator for this problem
-    if prob.filename not in INPUT_GENERATORS:
-        console.print(f"[yellow]No input generator defined for {prob.filename} to scale. We cannot benchmark it dynamically.[/yellow]")
-        return
-        
-    generator = INPUT_GENERATORS[prob.filename]
-    
-    console.print(Panel(f"[bold cyan]Benchmarking Complexity for {prob.title}[/bold cyan]\nAnalyzing execution time as input size scales..."))
-    
-    try:
-        solution_cls = load_solution_class(prob.filepath)
-    except Exception as e:
-        console.print(f"[bold red]Failed to load class: {e}[/bold red]")
-        return
-        
-    instance = solution_cls()
-    methods = [m for m in dir(solution_cls) if not m.startswith('__') and callable(getattr(solution_cls, m))]
-    method = getattr(instance, methods[0])
-    
-    # Input sizes to test
-    sizes = [10, 50, 100, 500, 1000, 3000, 5000, 8000]
-    runtimes = []
-    
-    with Progress(
-        SpinnerColumn(),
-        TextColumn("[progress.description]{task.description}"),
-        BarColumn(),
-        TextColumn("[progress.percentage]{task.percentage:>3.0f}%"),
-        console=console
-    ) as progress:
-        task = progress.add_task("[cyan]Running benchmarks...", total=len(sizes))
-        
-        for size in sizes:
-            # Generate inputs of this size
-            inputs = generator(size)
-            
-            # Warm up
-            try:
-                method(*inputs)
-            except Exception:
-                pass
-                
-            # Measure multiple runs
-            runs = 5
-            total_time = 0.0
-            
-            for _ in range(runs):
-                import copy
-                inputs_run = copy.deepcopy(inputs)
-                
-                start = time.perf_counter()
-                try:
-                    method(*inputs_run)
-                except Exception as e:
-                    console.print(f"\n[red]Benchmark crashed on size {size}: {e}[/red]")
-                    return
-                end = time.perf_counter()
-                total_time += (end - start)
-                
-            avg_time = (total_time / runs) * 1000  # milliseconds
-            runtimes.append(avg_time)
-            progress.advance(task)
-            
-    # Output Table
-    table = Table(title="Complexity Scaling Results")
-    table.add_column("Input Size (N)", justify="right", style="cyan")
-    table.add_column("Avg Time (ms)", justify="right", style="green")
-    
-    for size, t in zip(sizes, runtimes):
-        table.add_row(f"{size:,}", f"{t:.4f}")
-    console.print(table)
-    
-    # Plot Complexity Curve
-    plt.figure(figsize=(8, 5))
-    plt.plot(sizes, runtimes, marker='o', color='#FFA116', linewidth=2, label='Solution Time')
-    plt.title(f'Complexity Benchmark: {prob.title}', fontsize=12, fontweight='bold')
-    plt.xlabel('Input Size (N)', fontsize=10)
-    plt.ylabel('Execution Time (ms)', fontsize=10)
-    plt.grid(True, linestyle='--', alpha=0.6)
-    
-    # Add a theoretical complexity reference curve for visual comparison
-    # Normalizing theoretical curves to match the last value
-    last_t = runtimes[-1]
-    last_size = sizes[-1]
-    
-    # O(N) linear line
-    ref_o_n = [last_t * (s / last_size) for s in sizes]
-    plt.plot(sizes, ref_o_n, linestyle=':', color='green', alpha=0.5, label='Theoretical O(N)')
-    
-    # O(N log N)
-    import math
-    ref_o_nlog = [last_t * ((s * math.log(max(2, s))) / (last_size * math.log(last_size))) for s in sizes]
-    plt.plot(sizes, ref_o_nlog, linestyle='--', color='blue', alpha=0.5, label='Theoretical O(N log N)')
-    
-    plt.legend()
-    
-    # Save the plot
-    plot_filename = f"benchmark_{prob.filename.replace('.py', '')}.png"
-    plot_filepath = os.path.join(directory, plot_filename)
-    plt.savefig(plot_filepath, dpi=150, bbox_inches='tight')
-    plt.close()
-    
-    console.print(f"[bold green]✓ Complexity graph plotted and saved as [link=file://{plot_filepath}]{plot_filename}[/link]![/bold green]\n")
-
 def sync_readme(directory: str):
     problems = scan_problems(directory)
-    total = len(problems)
+    # Sort in reverse order to have latest at top
+    problems.sort(key=lambda p: p.order, reverse=True)
+    
     completed = sum(1 for p in problems if p.is_complete)
     
-    easy = sum(1 for p in problems if p.difficulty == 'Easy')
-    medium = sum(1 for p in problems if p.difficulty == 'Medium')
-    hard = sum(1 for p in problems if p.difficulty == 'Hard')
-    
-    comp_easy = sum(1 for p in problems if p.difficulty == 'Easy' and p.is_complete)
-    comp_medium = sum(1 for p in problems if p.difficulty == 'Medium' and p.is_complete)
-    comp_hard = sum(1 for p in problems if p.difficulty == 'Hard' and p.is_complete)
-    
-    # Generate Stats Block
-    def get_progress_bar(val, total_val):
-        if total_val == 0: return ""
-        pct = (val / total_val) * 100
-        filled = int(pct / 5)
-        return f"`[{'█' * filled}{'░' * (20 - filled)}]` {pct:.1f}% ({val}/{total_val})"
-
-    stats_block = f"""
-| Category | Progress | Count |
-| :--- | :--- | :---: |
-| **Total Solved** | {get_progress_bar(completed, total)} | **{completed}/{total}** |
-| **Easy** | {get_progress_bar(comp_easy, easy)} | **{comp_easy}/{easy}** |
-| **Medium** | {get_progress_bar(comp_medium, medium)} | **{comp_medium}/{medium}** |
-| **Hard** | {get_progress_bar(comp_hard, hard)} | **{comp_hard}/{hard}** |
-"""
+    stats_block = f"**Total Questions Solved:** {completed}"
 
     # Generate Problems Table Block
-    table_block = """
-| # | Problem Number | Title | Difficulty | Category | Time | Space | Status | Solution Link |
-| :-: | :-: | :--- | :-: | :--- | :-: | :-: | :-: | :-: |
-"""
+    list_block = ""
     for p in problems:
-        status_badge = "✅ Complete" if p.is_complete else "🚧 Skeleton"
-        diff_badge = f"🟢 Easy" if p.difficulty == "Easy" else (f"🟡 Medium" if p.difficulty == "Medium" else "🔴 Hard")
+        if not p.is_complete:
+            continue
         
         # LeetCode link
         title_linked = f"[{p.title}]({p.link})" if p.link else p.title
-        solution_link = f"[Solution](./{p.filename})"
         
-        table_block += f"| {p.order} | {p.number or 'N/A'} | {title_linked} | {diff_badge} | {p.category} | `{p.time}` | `{p.space}` | {status_badge} | {solution_link} |\n"
+        list_block += f"- {title_linked} | #{p.number or 'N/A'} | Time: `{p.time}` | Space: `{p.space}`\n"
 
     # Read and update README.md
     readme_path = os.path.join(directory, "README.md")
@@ -1007,16 +518,16 @@ def sync_readme(directory: str):
     try:
         # Progress Stats
         pattern_stats = r"(<!-- PROGRESS_STATS_START -->)(.*?)(<!-- PROGRESS_STATS_END -->)"
-        readme_content = re.sub(pattern_stats, f"\\1\n{stats_block}\n\\3", readme_content, flags=re.DOTALL)
+        readme_content = re.sub(pattern_stats, f"\\1\\n{stats_block}\\n\\3", readme_content, flags=re.DOTALL)
         
         # Problems Table
         pattern_table = r"(<!-- PROBLEMS_TABLE_START -->)(.*?)(<!-- PROBLEMS_TABLE_END -->)"
-        readme_content = re.sub(pattern_table, f"\\1\n{table_block}\n\\3", readme_content, flags=re.DOTALL)
+        readme_content = re.sub(pattern_table, f"\\1\\n{list_block}\\n\\3", readme_content, flags=re.DOTALL)
         
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(readme_content)
             
-        console.print("[bold green]✓ README.md progress dashboard & problem index synced successfully![/bold green]")
+        console.print("[bold green]✓ README.md progress & problem list synced successfully![/bold green]")
     except Exception as e:
         console.print(f"[bold red]Failed to sync README.md: {e}[/bold red]")
 
@@ -1098,14 +609,12 @@ def interactive_loop(directory: str):
         
         console.print("\n[bold cyan]Main Operations Menu:[/bold cyan]")
         console.print("  [bold]1.[/bold] 📋 List Problems Index")
-        console.print("  [bold]2.[/bold] 🧪 Run Tests on a Solution")
-        console.print("  [bold]3.[/bold] 🆕 Create New Problem Skeleton")
-        console.print("  [bold]4.[/bold] 📈 Benchmark Execution & Plot Complexity")
-        console.print("  [bold]5.[/bold] 🔄 Sync Metadata to README.md")
-        console.print("  [bold]6.[/bold] 🔧 Run Doctor to Standardize/Format Workspace")
+        console.print("  [bold]2.[/bold] 🆕 Create New Problem Skeleton")
+        console.print("  [bold]3.[/bold] 🔄 Sync Metadata to README.md")
+        console.print("  [bold]4.[/bold] 🔧 Run Doctor to Standardize/Format Workspace")
         console.print("  [bold]0.[/bold] 🚪 Exit")
         
-        choice = Prompt.ask("\nSelect option", choices=["0", "1", "2", "3", "4", "5", "6"], default="1")
+        choice = Prompt.ask("\nSelect option", choices=["0", "1", "2", "3", "4"], default="1")
         
         if choice == "0":
             console.print("\n[bold green]Goodbye! Keep solving and learning! 🧠🚀[/bold green]")
@@ -1114,21 +623,12 @@ def interactive_loop(directory: str):
             list_problems(directory)
             Prompt.ask("\nPress Enter to return to menu")
         elif choice == "2":
-            run_tests(directory)
-            Prompt.ask("\nPress Enter to return to menu")
-        elif choice == "3":
             create_problem(directory)
             Prompt.ask("\nPress Enter to return to menu")
-        elif choice == "4":
-            if not HAS_MATPLOTLIB:
-                console.print("[bold red]Matplotlib is required for plotting complexity curves.[/bold red]")
-            else:
-                benchmark_solution(directory)
-            Prompt.ask("\nPress Enter to return to menu")
-        elif choice == "5":
+        elif choice == "3":
             sync_readme(directory)
             Prompt.ask("\nPress Enter to return to menu")
-        elif choice == "6":
+        elif choice == "4":
             doctor_files(directory)
             Prompt.ask("\nPress Enter to return to menu")
 
@@ -1137,9 +637,8 @@ def interactive_loop(directory: str):
 # ==============================================================================
 def main():
     parser = argparse.ArgumentParser(description="LeetCode Workspace Productivity Suite Manager.")
-    parser.add_argument("command", nargs="?", choices=["list", "create", "test", "benchmark", "sync", "doctor"],
+    parser.add_argument("command", nargs="?", choices=["list", "create", "sync", "doctor"],
                         help="Command to run directly without entering the interactive menu.")
-    parser.add_argument("--file", "-f", help="Target filename for 'test' or 'benchmark' commands.")
     
     args = parser.parse_args()
     directory = os.path.dirname(os.path.abspath(__file__))
@@ -1149,10 +648,6 @@ def main():
         list_problems(directory)
     elif args.command == "create":
         create_problem(directory)
-    elif args.command == "test":
-        run_tests(directory, args.file)
-    elif args.command == "benchmark":
-        benchmark_solution(directory, args.file)
     elif args.command == "sync":
         sync_readme(directory)
     elif args.command == "doctor":

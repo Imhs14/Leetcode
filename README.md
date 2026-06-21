@@ -37,38 +37,28 @@ The scripts contained in this repository explore fundamental paradigms across ba
 ## 📊 Progress Dashboard
 
 <!-- PROGRESS_STATS_START -->
-
-| Category | Progress | Count |
-| :--- | :--- | :---: |
-| **Total Solved** | `[█████████████████░░░]` 88.2% (15/16) | **15/16** |
-| **Easy** | `[████████████████░░░░]` 84.6% (11/13) | **11/13** |
-| **Medium** | `[████████████████████]` 100.0% (4/4) | **4/4** |
-| **Hard** |  | **0/0** |
-
+**Total Questions Solved:** 16
 <!-- PROGRESS_STATS_END -->
 
 ## 🧩 Solved Problems
 
 <!-- PROBLEMS_TABLE_START -->
-
-| # | Problem Number | Title | Difficulty | Category | Time | Space | Status | Solution Link |
-| :-: | :-: | :--- | :-: | :--- | :-: | :-: | :-: | :-: |
-| 1 | 2239 | [Find Closest Number to Zero](https://leetcode.com/problems/find-closest-number-to-zero/) | 🟢 Easy | Arrays & Hashing | `O(N)` | `O(1)` | ✅ Complete | [Solution](./1-Closest-num-to-zero.py) |
-| 2 | 1768 | [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | 🟢 Easy | Two Pointers | `O(N + M)` | `O(N + M)` | ✅ Complete | [Solution](./2-merge-string-alternately.py) |
-| 3 | 13 | [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | 🟢 Easy | Math | `O(N)` | `O(1)` | ✅ Complete | [Solution](./3-Roman-to-Integer.py) |
-| 4 | 392 | [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | 🟢 Easy | Two Pointers | `O(T)` | `O(1)` | ✅ Complete | [Solution](./4-IsSubsequence.py) |
-| 5 | 121 | [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | 🟢 Easy | Sliding Window | `O(N)` | `O(1)` | ✅ Complete | [Solution](./5-Best_time_to_buy_&_sell_Stocks.py) |
-| 5 | 1 | [Two Sum](https://leetcode.com/problems/two-sum/) | 🟢 Easy | Arrays & Hashing | `O(N)` | `O(N)` | 🚧 Skeleton | [Solution](./5-Two_sum.py) |
-| 6 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | 🟢 Easy | Strings | `O(N * M)` | `O(1)` | ✅ Complete | [Solution](./6-Longest_common_prefix.py) |
-| 7 | 228 | [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | 🟢 Easy | Arrays | `O(N)` | `O(N)` | ✅ Complete | [Solution](./7-Summary_Ranges.py) |
-| 8 | 238 | [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | 🟡 Medium | Arrays & Hashing | `O(N)` | `O(1)` | ✅ Complete | [Solution](./8-Product_of_array_Except_itself.py) |
-| 9 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | 🟡 Medium | Sorting | `O(N log N)` | `O(N)` | ✅ Complete | [Solution](./9-Merge_Intervals.py) |
-| 10 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | 🟡 Medium | Matrices | `O(M * N)` | `O(1)` | ✅ Complete | [Solution](./10-Sprial_matrix.py) |
-| 11 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | 🟡 Medium | Matrices | `O(N^2)` | `O(1)` | ✅ Complete | [Solution](./11-Rotate_image.py) |
-| 12 | 20 | [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | 🟢 Easy | Stacks | `O(N)` | `O(N)` | ✅ Complete | [Solution](./12-Valid_parenthesis.py) |
-| 13 | 26 | [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | 🟢 Easy | Two Pointers | `O(N)` | `O(1)` | ✅ Complete | [Solution](./13-Remove_duplicates_from_sorted_array.py) |
-| 14 | 28 | [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | 🟢 Easy | Strings | `O(N * M)` | `O(1)` | ✅ Complete | [Solution](./14-Find_the_Index_of_the_First_Occurrence_in_a_String.py) |
-| 15 | 3959 | [Check Good Integer](https://leetcode.com/problems/check-good-integer/?envType=problem-list-v2&envId=wpb3lnsi) | 🟢 Easy | Math | `O(log n)` | `O(log n)` | ✅ Complete | [Solution](./15-Check_good_integer.py) |
+- Check Good Integer | #N/A | Time: `O(D)` | Space: `O(D)`
+- [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | #28 | Time: `O(N * M)` | Space: `O(1)`
+- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | #26 | Time: `O(N)` | Space: `O(1)`
+- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | #20 | Time: `O(N)` | Space: `O(N)`
+- [Rotate Image](https://leetcode.com/problems/rotate-image/) | #48 | Time: `O(N^2)` | Space: `O(1)`
+- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | #54 | Time: `O(M * N)` | Space: `O(1)`
+- [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | #56 | Time: `O(N log N)` | Space: `O(N)`
+- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | #238 | Time: `O(N)` | Space: `O(1)`
+- [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | #228 | Time: `O(N)` | Space: `O(N)`
+- [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | #14 | Time: `O(N * M)` | Space: `O(1)`
+- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | #121 | Time: `O(N)` | Space: `O(1)`
+- [Two Sum](https://leetcode.com/problems/two-sum/) | #1 | Time: `O(N)` | Space: `O(N)`
+- [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | #392 | Time: `O(T)` | Space: `O(1)`
+- [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | #13 | Time: `O(N)` | Space: `O(1)`
+- [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | #1768 | Time: `O(N + M)` | Space: `O(N + M)`
+- [Find Closest Number to Zero](https://leetcode.com/problems/find-closest-number-to-zero/) | #2239 | Time: `O(N)` | Space: `O(1)`
 
 <!-- PROBLEMS_TABLE_END -->
 
