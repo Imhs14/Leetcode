@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+    <style>
+        .bg { fill: #282828; }
+        .text-huge { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 600; }
+        .text-large { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; }
+        .text-medium { fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; }
+        .text-small { fill: #8c8c8c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 500; }
+        .text-easy { fill: #00b8a3; }
+        .text-medium-diff { fill: #ffc01e; }
+        .text-hard { fill: #ff375f; }
+        
+        .box { fill: #333333; rx: 8; }
+        
+        .ring-bg-easy { fill: none; stroke: #224341; stroke-width: 6; stroke-linecap: round; }
+        .ring-bg-med { fill: none; stroke: #5e4e26; stroke-width: 6; stroke-linecap: round; }
+        .ring-bg-hard { fill: none; stroke: #5a2c3a; stroke-width: 6; stroke-linecap: round; }
+        
+        .ring-easy { fill: none; stroke: #00b8a3; stroke-width: 6; stroke-linecap: round; }
+        .ring-med { fill: none; stroke: #ffc01e; stroke-width: 6; stroke-linecap: round; }
+        .ring-hard { fill: none; stroke: #ff375f; stroke-width: 6; stroke-linecap: round; }
+    </style>
+    
+    <!-- Background -->
+    <rect class="bg" width="600" height="200" rx="10" />
+    
+    <!-- Donut Chart -->
+    <path class="ring-bg-med" d="M 209.77 94.77 A 60 60 0 0 0 124.64 45.62" />
+    <path class="ring-bg-hard" d="M 124.64 154.38 A 60 60 0 0 0 209.77 105.23" />
+    <path class="ring-bg-easy" d="M 115.59 50.85 A 60 60 0 0 0 115.59 149.15" />
+    
+    <path class="ring-med" d="M 124.84 45.53 A 60 60 0 0 0 124.64 45.62" />
+    <path class="ring-hard" d="" />
+    <path class="ring-easy" d="M 114.40 148.30 A 60 60 0 0 0 115.59 149.15" />
+    
+    <!-- Center Text -->
+    <text x="135" y="105" class="text-huge" text-anchor="middle">16</text>
+    <text x="175" y="105" class="text-small" text-anchor="middle">/3972</text>
+    <text x="150" y="130" class="text-medium" text-anchor="middle"><tspan fill="#00b8a3">✓</tspan> Solved</text>
+    
+    <!-- Right side stats -->
+    <g transform="translate(400, 25)">
+        <rect class="box" x="0" y="0" width="170" height="40" />
+        <text x="15" y="25" class="text-large text-easy">Easy</text>
+        <text x="155" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">12</tspan><tspan fill="#8c8c8c" font-size="14px">/951</tspan></text>
+    </g>
+    <g transform="translate(400, 80)">
+        <rect class="box" x="0" y="0" width="170" height="40" />
+        <text x="15" y="25" class="text-large text-medium-diff">Med.</text>
+        <text x="155" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">4</tspan><tspan fill="#8c8c8c" font-size="14px">/2074</tspan></text>
+    </g>
+    <g transform="translate(400, 135)">
+        <rect class="box" x="0" y="0" width="170" height="40" />
+        <text x="15" y="25" class="text-large text-hard">Hard</text>
+        <text x="155" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">0</tspan><tspan fill="#8c8c8c" font-size="14px">/947</tspan></text>
+    </g>
+</svg>

@@ -486,26 +486,100 @@ if __name__ == '__main__':
     console.print(f"[bold green]Created problem scaffold: [link=file://{filepath}]{filename}[/link][/bold green]")
 
 def sync_readme(directory: str):
+    import math
     problems = scan_problems(directory)
-    # Sort in reverse order to have latest at top
-    problems.sort(key=lambda p: p.order, reverse=True)
     
-    completed = sum(1 for p in problems if p.is_complete)
+    comp_easy = sum(1 for p in problems if p.difficulty == 'Easy' and p.is_complete)
+    comp_med = sum(1 for p in problems if p.difficulty == 'Medium' and p.is_complete)
+    comp_hard = sum(1 for p in problems if p.difficulty == 'Hard' and p.is_complete)
+    completed = comp_easy + comp_med + comp_hard
     
-    stats_block = f"**Total Questions Solved:** {completed}"
+    total_easy = 951
+    total_med = 2074
+    total_hard = 947
+    total = total_easy + total_med + total_hard
 
-    # Generate Problems Table Block
-    list_block = ""
-    for p in problems:
-        if not p.is_complete:
-            continue
-        
-        # LeetCode link
-        title_linked = f"[{p.title}]({p.link})" if p.link else p.title
-        
-        list_block += f"- {title_linked} | #{p.number or 'N/A'} | Time: `{p.time}` | Space: `{p.space}`\n"
+    def describe_arc(x, y, r, start_angle, end_angle):
+        if end_angle <= start_angle:
+            return ""
+        def polar_to_cartesian(cx, cy, radius, angle_deg):
+            angle_rad = (angle_deg - 90) * math.pi / 180.0
+            return cx + radius * math.cos(angle_rad), cy + radius * math.sin(angle_rad)
 
-    # Read and update README.md
+        start = polar_to_cartesian(x, y, r, end_angle)
+        end = polar_to_cartesian(x, y, r, start_angle)
+        large_arc_flag = "0" if end_angle - start_angle <= 180 else "1"
+        return f"M {start[0]:.2f} {start[1]:.2f} A {r} {r} 0 {large_arc_flag} 0 {end[0]:.2f} {end[1]:.2f}"
+
+    bg_med = describe_arc(150, 100, 60, -25, 85)
+    bg_hard = describe_arc(150, 100, 60, 95, 205)
+    bg_easy = describe_arc(150, 100, 60, 215, 325)
+
+    fg_med = describe_arc(150, 100, 60, -25, -25 + (comp_med / total_med * 110)) if comp_med > 0 else ""
+    fg_hard = describe_arc(150, 100, 60, 95, 95 + (comp_hard / total_hard * 110)) if comp_hard > 0 else ""
+    fg_easy = describe_arc(150, 100, 60, 215, 215 + (comp_easy / total_easy * 110)) if comp_easy > 0 else ""
+
+    svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+    <style>
+        .bg {{ fill: #282828; }}
+        .text-huge {{ fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 32px; font-weight: 600; }}
+        .text-large {{ fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 16px; font-weight: 600; }}
+        .text-medium {{ fill: #ffffff; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 14px; font-weight: 500; }}
+        .text-small {{ fill: #8c8c8c; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; font-size: 12px; font-weight: 500; }}
+        .text-easy {{ fill: #00b8a3; }}
+        .text-medium-diff {{ fill: #ffc01e; }}
+        .text-hard {{ fill: #ff375f; }}
+        
+        .box {{ fill: #333333; rx: 8; }}
+        
+        .ring-bg-easy {{ fill: none; stroke: #224341; stroke-width: 6; stroke-linecap: round; }}
+        .ring-bg-med {{ fill: none; stroke: #5e4e26; stroke-width: 6; stroke-linecap: round; }}
+        .ring-bg-hard {{ fill: none; stroke: #5a2c3a; stroke-width: 6; stroke-linecap: round; }}
+        
+        .ring-easy {{ fill: none; stroke: #00b8a3; stroke-width: 6; stroke-linecap: round; }}
+        .ring-med {{ fill: none; stroke: #ffc01e; stroke-width: 6; stroke-linecap: round; }}
+        .ring-hard {{ fill: none; stroke: #ff375f; stroke-width: 6; stroke-linecap: round; }}
+    </style>
+    
+    <rect class="bg" width="600" height="200" rx="10" />
+    
+    <!-- Background arcs -->
+    <path class="ring-bg-med" d="{bg_med}" />
+    <path class="ring-bg-hard" d="{bg_hard}" />
+    <path class="ring-bg-easy" d="{bg_easy}" />
+    
+    <!-- Foreground arcs -->
+    <path class="ring-med" d="{fg_med}" />
+    <path class="ring-hard" d="{fg_hard}" />
+    <path class="ring-easy" d="{fg_easy}" />
+    
+    <!-- Center text -->
+    <text x="135" y="105" class="text-huge" text-anchor="middle">{completed}</text>
+    <text x="175" y="105" class="text-small" text-anchor="middle">/{total}</text>
+    <text x="150" y="130" class="text-medium" text-anchor="middle"><tspan fill="#00b8a3">✓</tspan> Solved</text>
+    
+    <!-- Right side stats -->
+    <g transform="translate(380, 25)">
+        <rect class="box" x="0" y="0" width="180" height="40" />
+        <text x="15" y="25" class="text-large text-easy">Easy</text>
+        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">{comp_easy}</tspan><tspan fill="#8c8c8c" font-size="14px">/{total_easy}</tspan></text>
+    </g>
+    <g transform="translate(380, 80)">
+        <rect class="box" x="0" y="0" width="180" height="40" />
+        <text x="15" y="25" class="text-large text-medium-diff">Med.</text>
+        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">{comp_med}</tspan><tspan fill="#8c8c8c" font-size="14px">/{total_med}</tspan></text>
+    </g>
+    <g transform="translate(380, 135)">
+        <rect class="box" x="0" y="0" width="180" height="40" />
+        <text x="15" y="25" class="text-large text-hard">Hard</text>
+        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">{comp_hard}</tspan><tspan fill="#8c8c8c" font-size="14px">/{total_hard}</tspan></text>
+    </g>
+</svg>'''
+
+    svg_path = os.path.join(directory, "leetcode_stats.svg")
+    with open(svg_path, 'w', encoding='utf-8') as f:
+        f.write(svg)
+
     readme_path = os.path.join(directory, "README.md")
     if not os.path.exists(readme_path):
         console.print(f"[bold red]README.md not found at {readme_path}[/bold red]")
@@ -514,20 +588,16 @@ def sync_readme(directory: str):
     with open(readme_path, 'r', encoding='utf-8') as f:
         readme_content = f.read()
         
-    # Replace content between placeholders
+    stats_block = '<p align="center">\\n  <img src="./leetcode_stats.svg" alt="LeetCode Stats" />\\n</p>'
+    
     try:
-        # Progress Stats
         pattern_stats = r"(<!-- PROGRESS_STATS_START -->)(.*?)(<!-- PROGRESS_STATS_END -->)"
-        readme_content = re.sub(pattern_stats, f"\\1\\n{stats_block}\\n\\3", readme_content, flags=re.DOTALL)
-        
-        # Problems Table
-        pattern_table = r"(<!-- PROBLEMS_TABLE_START -->)(.*?)(<!-- PROBLEMS_TABLE_END -->)"
-        readme_content = re.sub(pattern_table, f"\\1\\n{list_block}\\n\\3", readme_content, flags=re.DOTALL)
+        readme_content = re.sub(pattern_stats, r"\\1\n" + stats_block + r"\n\3", readme_content, flags=re.DOTALL)
         
         with open(readme_path, 'w', encoding='utf-8') as f:
             f.write(readme_content)
             
-        console.print("[bold green]✓ README.md progress & problem list synced successfully![/bold green]")
+        console.print("[bold green]✓ README.md progress synced successfully![/bold green]")
     except Exception as e:
         console.print(f"[bold red]Failed to sync README.md: {e}[/bold red]")
 

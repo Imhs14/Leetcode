@@ -36,31 +36,11 @@ The scripts contained in this repository explore fundamental paradigms across ba
 
 ## 📊 Progress Dashboard
 
-<!-- PROGRESS_STATS_START -->
-**Total Questions Solved:** 16
+\1
+<p align="center">
+  <img src="./leetcode_stats.svg" alt="LeetCode Stats" />
+</p>
 <!-- PROGRESS_STATS_END -->
-
-## 🧩 Solved Problems
-
-<!-- PROBLEMS_TABLE_START -->
-- Check Good Integer | #N/A | Time: `O(D)` | Space: `O(D)`
-- [Find the Index of the First Occurrence in a String](https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/) | #28 | Time: `O(N * M)` | Space: `O(1)`
-- [Remove Duplicates from Sorted Array](https://leetcode.com/problems/remove-duplicates-from-sorted-array/) | #26 | Time: `O(N)` | Space: `O(1)`
-- [Valid Parentheses](https://leetcode.com/problems/valid-parentheses/) | #20 | Time: `O(N)` | Space: `O(N)`
-- [Rotate Image](https://leetcode.com/problems/rotate-image/) | #48 | Time: `O(N^2)` | Space: `O(1)`
-- [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | #54 | Time: `O(M * N)` | Space: `O(1)`
-- [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | #56 | Time: `O(N log N)` | Space: `O(N)`
-- [Product of Array Except Self](https://leetcode.com/problems/product-of-array-except-self/) | #238 | Time: `O(N)` | Space: `O(1)`
-- [Summary Ranges](https://leetcode.com/problems/summary-ranges/) | #228 | Time: `O(N)` | Space: `O(N)`
-- [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | #14 | Time: `O(N * M)` | Space: `O(1)`
-- [Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock/) | #121 | Time: `O(N)` | Space: `O(1)`
-- [Two Sum](https://leetcode.com/problems/two-sum/) | #1 | Time: `O(N)` | Space: `O(N)`
-- [Is Subsequence](https://leetcode.com/problems/is-subsequence/) | #392 | Time: `O(T)` | Space: `O(1)`
-- [Roman to Integer](https://leetcode.com/problems/roman-to-integer/) | #13 | Time: `O(N)` | Space: `O(1)`
-- [Merge Strings Alternately](https://leetcode.com/problems/merge-strings-alternately/) | #1768 | Time: `O(N + M)` | Space: `O(N + M)`
-- [Find Closest Number to Zero](https://leetcode.com/problems/find-closest-number-to-zero/) | #2239 | Time: `O(N)` | Space: `O(1)`
-
-<!-- PROBLEMS_TABLE_END -->
 
 ---
 
