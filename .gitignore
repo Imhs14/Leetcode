@@ -5,6 +5,3 @@ __pycache__/
 
 # OS Files
 .DS_Store
-
-# Generated complexity benchmark plots
-benchmark_*.png
