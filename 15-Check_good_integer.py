@@ -1,5 +1,5 @@
 # LeetCode Problem N/A: Check Good Integer
-# URL: 
+# URL: https://leetcode.com/problems/check-good-integer/description/
 # Difficulty: Easy
 # Category: Math
 # Time Complexity: O(D)
