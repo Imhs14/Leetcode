@@ -26,5 +26,5 @@ for i in range(0,len(jewels)):
         else:
             j += 1
 
-print(count)
+ return count
     """
