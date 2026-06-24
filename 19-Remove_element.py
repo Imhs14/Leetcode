@@ -16,3 +16,17 @@ val =
 2
 Output = [0,1,4,0,3] 
 """
+
+""" My solution at first 
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        s = len(nums)
+        i = 0
+        while i < s:
+            if nums[i] == val:
+                nums.remove(nums[i])
+                s -= 1
+            elif nums[i]] != val:
+                i += 1
+        
+"""
