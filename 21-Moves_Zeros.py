@@ -5,4 +5,5 @@ class Solution:
             if nums[r] != 0:
                 nums[L], nums[r] = nums[r], nums[L]
                 L += 1
-            
+        # Time = O(n) , Space = O,(1), # Two pointers
+    
