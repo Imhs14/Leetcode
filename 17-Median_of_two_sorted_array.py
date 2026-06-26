@@ -1,27 +1,6 @@
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
-        nums1 += nums2
-        nums1.sort()
-        if len(nums1)%2 == 0:
-            a, c = int((len(nums1))/2) , int((len(nums1))/2 + 1)
-            d = (nums1[a-1] + nums1[c-1])/2
-            return float(d)
-        else:
-            b = int((len(nums1) + 1)/2)
-            return float(nums1[b-1])
-
-# Above one used brute force to solve 
-
-
-
-
-
-
-
-
-
-# below one uses binary search to solve it 
-"""
+        # below one uses binary search to solve it
         ### This is the most optimal 
         if len(nums1) > len(nums2):
             nums1, nums2 = nums2, nums1
@@ -49,4 +28,18 @@ class Solution:
             elif max_left1 > min_right2:
                 hi = i - 1   # move i left
             else:
-                lo = i + 1   # move i right"""
+                lo = i + 1   # move i right
+
+"""
+nums1 += nums2
+        nums1.sort()
+        if len(nums1)%2 == 0:
+            a, c = int((len(nums1))/2) , int((len(nums1))/2 + 1)
+            d = (nums1[a-1] + nums1[c-1])/2
+            return float(d)
+        else:
+            b = int((len(nums1) + 1)/2)
+            return float(nums1[b-1])
+"""
+
+# Above one used brute force to solve
