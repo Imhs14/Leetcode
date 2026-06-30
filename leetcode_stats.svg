@@ -33,7 +33,7 @@
     <path class="ring-easy" d="M 114.40 148.30 A 60 60 0 0 0 115.59 149.15" />
     
     <!-- Center text -->
-    <text x="135" y="105" class="text-huge" text-anchor="middle">27</text>
+    <text x="135" y="105" class="text-huge" text-anchor="middle">29</text>
     <text x="175" y="105" class="text-small" text-anchor="middle">/3972</text>
     <text x="150" y="130" class="text-medium" text-anchor="middle"><tspan fill="#00b8a3">✓</tspan> Solved</text>
     
@@ -41,7 +41,7 @@
     <g transform="translate(380, 25)">
         <rect class="box" x="0" y="0" width="180" height="40" />
         <text x="15" y="25" class="text-large text-easy">Easy</text>
-        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">22</tspan><tspan fill="#8c8c8c" font-size="14px">/951</tspan></text>
+        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">24</tspan><tspan fill="#8c8c8c" font-size="14px">/951</tspan></text>
     </g>
     <g transform="translate(380, 80)">
         <rect class="box" x="0" y="0" width="180" height="40" />
