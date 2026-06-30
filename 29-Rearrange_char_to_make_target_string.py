@@ -10,8 +10,9 @@ class Solution:
     def rearrangeCharacters(self, s: str, target: str) -> int:
         counter = defaultdict(int)
         target_counter = Counter(target)
+        target_set = set(target)
         for c in s:
-            if c in target:
+            if c in target_set:
                 counter[c] += 1
         return min(counter.get(c,0)//target_counter[c] for c in target_counter)
     
