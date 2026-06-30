@@ -47,3 +47,14 @@ for i in range(0,len(jewels)):
 
  return count
     """
+
+'''
+jewels =
+"aA"
+
+stones =
+"aAAbbbb"
+
+Output
+3
+'''

@@ -19,3 +19,11 @@ class Solution:
         return result
     # times O(n log n)
     # space O(n)
+
+'''
+intervals =
+[[1, 3], [2, 6], [8, 10], [15, 18]]
+
+Output
+[[1, 6], [8, 10], [15, 18]]
+'''

@@ -20,3 +20,11 @@ class Solution:
         
         # Valid only if all brackets were matched (stack is empty)
         return len(stack) == 0
+
+'''
+s =
+"()[]{}"
+
+Output
+True
+'''

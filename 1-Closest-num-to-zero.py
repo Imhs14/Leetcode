@@ -21,3 +21,11 @@ class Solution:
 nums = list(map(int, input().split()))  # you'd handle input yourself
 sol = solution()
 print(sol.findclosestnumber(nums))
+
+'''
+nums =
+[-4, -2, 1, 4, 8]
+
+Output
+1
+'''

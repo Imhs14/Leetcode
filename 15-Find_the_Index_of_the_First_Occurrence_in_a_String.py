@@ -9,3 +9,14 @@ class Solution:
         for i in range(0, len(haystack)) :
             if haystack[i:i + len(needle) ] == needle:
                 return i
+
+'''
+haystack =
+"sadbutsad"
+
+needle =
+"sad"
+
+Output
+0
+'''

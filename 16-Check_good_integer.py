@@ -14,3 +14,11 @@ class Solution:
             sq_sum += a*a
         
         return  sq_sum - dig_sum >= 50 
+
+'''
+n =
+1234
+
+Output
+True
+'''

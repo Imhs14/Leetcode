@@ -29,3 +29,11 @@ class Solution:
             count += 1 if num == candidate else -1
         return candidate
 """
+
+'''
+nums =
+[3, 2, 3]
+
+Output
+3
+'''

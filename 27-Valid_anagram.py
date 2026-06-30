@@ -34,3 +34,14 @@ class Solution:
         return  sD == Td
 
 # Time  = O(n), Space = O(n) 
+
+'''
+s =
+"anagram"
+
+t =
+"nagaram"
+
+Output
+True
+'''

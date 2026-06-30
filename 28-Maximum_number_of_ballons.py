@@ -33,3 +33,10 @@ class Solution:
             count[ord('n') - ord('a')]    
         )
 
+'''
+text =
+"nlaebolko"
+
+Output
+1
+'''

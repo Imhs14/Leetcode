@@ -31,3 +31,11 @@ class Solution:
         return k    ''' 
     # time O(n)
     # space O(1)
+
+'''
+nums =
+[0, 0, 1, 1, 1, 2, 2, 3, 3, 4]
+
+Output
+5
+'''

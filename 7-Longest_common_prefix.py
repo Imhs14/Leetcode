@@ -13,3 +13,11 @@ class Solution:
             
             seen += (strs[0][positions])
         return seen
+
+'''
+strs =
+["flower", "flow", "flight"]
+
+Output
+"fl"
+'''

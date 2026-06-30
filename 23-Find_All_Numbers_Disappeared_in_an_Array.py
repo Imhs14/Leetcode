@@ -31,3 +31,11 @@ class Solution:
             if nums[i] > 0:
                 result.append(i + 1)
         return result"""
+
+'''
+nums =
+[4, 3, 2, 7, 8, 2, 3, 1]
+
+Output
+[5, 6]
+'''

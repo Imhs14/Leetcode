@@ -54,3 +54,14 @@ class Solution:
 
         return first == len(s)
 '''
+
+'''
+s =
+"abc"
+
+t =
+"ahbgdc"
+
+Output
+True
+'''

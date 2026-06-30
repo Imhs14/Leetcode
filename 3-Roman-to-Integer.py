@@ -38,3 +38,11 @@ eg i/p & o/p :
 "III"
 3 
 """
+
+'''
+s =
+"MCMXCIV"
+
+Output
+1994
+'''

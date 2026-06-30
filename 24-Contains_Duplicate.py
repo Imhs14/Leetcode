@@ -30,3 +30,11 @@ Another way to solve it but not efficient, in this we do not have an early exit
 
 return (len(nums) != len(set(nums))) 
 """
+
+'''
+nums =
+[1, 2, 3, 1]
+
+Output
+True
+'''

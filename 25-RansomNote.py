@@ -56,3 +56,14 @@ class Solution:
                 return False
         return True
 """ 
+
+'''
+ransomNote =
+"a"
+
+magazine =
+"b"
+
+Output
+False
+'''

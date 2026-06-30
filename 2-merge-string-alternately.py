@@ -38,3 +38,14 @@ I/P-O/P :
 heera shanker
 hsehearnaker
 """
+
+'''
+word1 =
+"abc"
+
+word2 =
+"pqr"
+
+Output
+"apbqcr"
+'''
