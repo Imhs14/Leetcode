@@ -1,9 +1,7 @@
-# LeetCode Problem 20: Valid Parentheses
-# URL: https://leetcode.com/problems/valid-parentheses/
-# Difficulty: Easy
-# Category: Stacks
-# Time Complexity: O(N)
-# Space Complexity: O(N)
+# Question : 20. Valid Parentheses
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Stacks
+# Difficulty : Easy
 
 class Solution:
     def isValid(self, s: str) -> bool:

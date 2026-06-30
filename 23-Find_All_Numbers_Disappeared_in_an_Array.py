@@ -1,3 +1,8 @@
+# Question : 448. Find All Numbers Disappeared in an Array
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
+
 class Solution:
     def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
         return list(set(range(1, len(nums)+1))-set(nums))

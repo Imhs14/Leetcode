@@ -1,9 +1,7 @@
-# LeetCode Problem 13: Roman to Integer
-# URL: https://leetcode.com/problems/roman-to-integer/
-# Difficulty: Easy
-# Category: Math
-# Time Complexity: O(N)
-# Space Complexity: O(1)
+# Question : 13. Roman to Integer
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Math
+# Difficulty : Easy
 
 class Solution:
     def romanToInt(self, s: str) -> int:

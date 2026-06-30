@@ -1,3 +1,7 @@
+# Question : 383. Ransom Note
+# Complexity : Time: O(M + N), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         counter = {}

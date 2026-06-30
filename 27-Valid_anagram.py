@@ -1,3 +1,8 @@
+# Question : 242. Valid Anagram
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
+
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         sh = {}

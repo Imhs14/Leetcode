@@ -1,9 +1,7 @@
-# LeetCode Problem N/A: Merge Sorted Array
-# URL: https://leetcode.com/problems/merge-sorted-array/?envType=problem-list-v2&envId=wpb3lnsi
-# Difficulty: Easy
-# Category: Two Pointer
-# Time Complexity: O(N)
-# Space Complexity: O(1)
+# Question : 88. Merge Sorted Array
+# Complexity : Time: O(N log N), Space: O(1)
+# Topic/Category : Two Pointers
+# Difficulty : Easy
 
 class Solution:
     def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:

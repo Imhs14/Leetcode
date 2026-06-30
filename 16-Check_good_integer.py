@@ -1,9 +1,7 @@
-# LeetCode Problem N/A: Check Good Integer
-# URL: https://leetcode.com/problems/check-good-integer/description/
-# Difficulty: Easy
-# Category: Math
-# Time Complexity: O(D)
-# Space Complexity: O(D)
+# Question : 3248. Check Good Integer
+# Complexity : Time: O(D), Space: O(D)
+# Topic/Category : Math
+# Difficulty : Easy
 
 class Solution:
     def checkGoodInteger(self, n: int) -> bool:

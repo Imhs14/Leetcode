@@ -1,9 +1,7 @@
-# LeetCode Problem 48: Rotate Image
-# URL: https://leetcode.com/problems/rotate-image/
-# Difficulty: Medium
-# Category: Matrices
-# Time Complexity: O(N^2)
-# Space Complexity: O(1)
+# Question : 48. Rotate Image
+# Complexity : Time: O(N^2), Space: O(1)
+# Topic/Category : Matrices
+# Difficulty : Medium
 
 class Solution:
     def rotate(self, matrix: List[List[int]]) -> None:

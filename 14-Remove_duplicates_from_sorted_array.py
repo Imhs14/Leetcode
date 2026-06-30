@@ -1,9 +1,7 @@
-# LeetCode Problem 26: Remove Duplicates from Sorted Array
-# URL: https://leetcode.com/problems/remove-duplicates-from-sorted-array/
-# Difficulty: Easy
-# Category: Two Pointers
-# Time Complexity: O(N)
-# Space Complexity: O(1)
+# Question : 26. Remove Duplicates from Sorted Array
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Two Pointers
+# Difficulty : Easy
 
 from typing import List
 

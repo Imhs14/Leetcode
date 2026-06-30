@@ -1,3 +1,8 @@
+# Question : 169. Majority Element
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
+
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
         mj = {}

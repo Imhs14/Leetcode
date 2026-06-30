@@ -1,3 +1,7 @@
+# Question : 217. Contains Duplicate
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         s = set()

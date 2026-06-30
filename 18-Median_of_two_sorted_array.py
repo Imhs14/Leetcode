@@ -1,3 +1,8 @@
+# Question : 4. Median of Two Sorted Arrays
+# Complexity : Time: O(log(min(M, N))), Space: O(1)
+# Topic/Category : Binary Search
+# Difficulty : Hard
+
 class Solution:
     def findMedianSortedArrays(self, nums1: List[int], nums2: List[int]) -> float:
         # below one uses binary search to solve it

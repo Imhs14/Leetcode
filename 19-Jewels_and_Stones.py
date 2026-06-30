@@ -1,3 +1,8 @@
+# Question : 771. Jewels and Stones
+# Complexity : Time: O(M + N), Space: O(M)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
+
 class Solution:
     def numJewelsInStones(self, jewels: str, stones: str) -> int:
         count = 0

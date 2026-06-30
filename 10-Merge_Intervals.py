@@ -1,9 +1,7 @@
-# LeetCode Problem 56: Merge Intervals
-# URL: https://leetcode.com/problems/merge-intervals/
-# Difficulty: Medium
-# Category: Sorting
-# Time Complexity: O(N log N)
-# Space Complexity: O(N)
+# Question : 56. Merge Intervals
+# Complexity : Time: O(N log N), Space: O(N)
+# Topic/Category : Sorting
+# Difficulty : Medium
 
 class Solution:
     def merge(self, intervals: List[List[int]]) -> List[List[int]]:

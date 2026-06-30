@@ -1,3 +1,8 @@
+# Question : 27. Remove Element
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Two Pointers
+# Difficulty : Easy
+
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         k = 0

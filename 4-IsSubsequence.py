@@ -1,9 +1,7 @@
-# LeetCode Problem 392: Is Subsequence
-# URL: https://leetcode.com/problems/is-subsequence/
-# Difficulty: Easy
-# Category: Two Pointers
-# Time Complexity: O(T)
-# Space Complexity: O(1)
+# Question : 392. Is Subsequence
+# Complexity : Time: O(T), Space: O(1)
+# Topic/Category : Two Pointers
+# Difficulty : Easy
 
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:

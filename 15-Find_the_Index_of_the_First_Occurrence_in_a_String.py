@@ -1,9 +1,7 @@
-# LeetCode Problem 28: Find the Index of the First Occurrence in a String
-# URL: https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/
-# Difficulty: Easy
-# Category: Strings
-# Time Complexity: O(N * M)
-# Space Complexity: O(1)
+# Question : 28. Find the Index of the First Occurrence in a String
+# Complexity : Time: O(N * M), Space: O(1)
+# Topic/Category : Strings
+# Difficulty : Easy
 
 class Solution:
     def strStr(self, haystack: str, needle: str) -> int:
