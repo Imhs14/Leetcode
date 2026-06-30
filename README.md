@@ -1,5 +1,3 @@
-Here is a clean, modern, and highly focused README.md for your LeetCode repository. It positions your work perfectly—emphasizing continuous growth, problem-solving skills, and logical development rather than just a checklist of tasks.
-
 # ⚡ LeetCode Problems & Solutions 🧠
 
 Welcome to my dedicated space for algorithmic development and critical thinking. This repository serves as a personal laboratory where I break down, implement, and optimize solutions to various LeetCode problems. 
