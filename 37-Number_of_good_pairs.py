@@ -1,5 +1,17 @@
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
+        output = 0
+        for i in range(0,len(nums)):
+            for j in range(1,len(nums)):
+                if nums[i] == nums[j] and i < j:
+                    output += 1
+        return output
+# Time : O(n), Space : O(n) Optimized solution
+
+
+# These both are brute force Time :O(n^2), Space : O(n)
+class Solution:
+    def numIdenticalPairs(self, nums: List[int]) -> int:
         output = []
         for i in range(0,len(nums)):
             for j in range(0,len(nums)): # here as we don't need to see 1st element again so we are starting at 1 and not at 0
