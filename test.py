@@ -1,4 +1,4 @@
-class Solution:
+'''class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         for i in range(9):
             s = set()
@@ -61,3 +61,6 @@ class Solution:
             key = tuple(count)
             ang[key].append(c)
         return list(ang.values())
+'''
+n = -4
+print(abs(n))
