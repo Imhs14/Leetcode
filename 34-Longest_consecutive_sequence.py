@@ -11,3 +11,5 @@ class Solution:
                     next_num += 1
                 longest = max(longest, length)
         return longest
+
+# Time = O(n), Space = O(n)

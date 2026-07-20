@@ -3,3 +3,4 @@ class Solution:
         for i in range(1,300):
             if i % 2 == 0 and i % n == 0:
                 return i 
+# Time = O(n), Space = O(1)

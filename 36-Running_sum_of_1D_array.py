@@ -7,3 +7,4 @@ class Solution:
             res.append(ad)
             prev = ad
         return res
+# Time = O(n), Space  = O(n)
