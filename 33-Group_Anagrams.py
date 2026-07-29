@@ -13,9 +13,7 @@ class Solution:
             anagrams_dict[key].append(s)
             
         return list(anagrams_dict.values())
-
 # Time O(n * m), space = O(n)
-
 class Solution:
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         def isAnagram(s,t):
@@ -35,7 +33,6 @@ class Solution:
         anagrams = strs
         j = len(anagrams)-1
         while j>=0:
-
             anagram = []
             anagram.append(anagrams[j])
             for i in range(j-1,-1,-1):
@@ -46,7 +43,6 @@ class Solution:
             
             result.append(anagram)
             j-=1
-
         return result
     
 class Solution:
@@ -61,7 +57,6 @@ class Solution:
                 return False
             H[char] -= 1
         return True
-
     def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
         grouped = [0] * len(strs)
         ans = []
@@ -74,3 +69,7 @@ class Solution:
                         grouped[j] = 1    
                 ans.append(ls)        
         return ans
+"""
+strs = ["eat","tea","tan","ate","nat","bat"]
+o/p = [["bat"],["nat","tan"],["ate","eat","tea"]]
+"""

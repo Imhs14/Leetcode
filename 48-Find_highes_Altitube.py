@@ -8,9 +8,12 @@ class Solution:
             if count > 0 and count > max_alt:
                 max_alt = count
         return max_alt
-
 # Time = O(n), Space = O(1)
 """
 gain = [-5,1,5,0,-7]
 o/p : 1 
+"""
+"""
+gain = [-5,1,5,0,-7]
+o/p = 1
 """

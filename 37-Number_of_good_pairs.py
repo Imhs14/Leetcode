@@ -8,7 +8,6 @@ class Solution:
         return output
 # Time : O(n), Space : O(n) Optimized solution
 
-
 # These both are brute force Time :O(n^2), Space : O(n)
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
@@ -29,3 +28,7 @@ class Solution:
                 if nums[i] == nums[j] and i < j:
                     output += 1
         return output
+"""
+nums = [1,2,3,1,1,3]
+o/p = 4
+"""

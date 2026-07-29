@@ -4,9 +4,7 @@ class Solution:
         for i in range(0, n):
             res.extend([nums[i], nums[n+i]])
         return res
-
 # Time = O(n), Space = O(n)
-
 # case 1 
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
@@ -26,3 +24,8 @@ class Solution:
             res.append(nums[i])
             res.append(nums[n+i])
         return res
+"""
+nums = [2,5,1,3,4,7]
+n = 3
+o/p = [2,3,5,4,1,7]
+"""

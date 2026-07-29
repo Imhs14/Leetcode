@@ -2,7 +2,6 @@
 # Complexity : Time: O(N), Space: O(1)
 # Topic/Category : Two Pointers
 # Difficulty : Easy
-
 class Solution:
     def moveZeroes(self, nums: List[int]) -> None:
         L = 0
@@ -28,10 +27,12 @@ class Solution:
         # Time = O(n) , Space = O,(1), # Two pointers
 """
     
-'''
-nums =
+'''nums =
 [0, 1, 0, 3, 12]
-
 Output
 [1, 3, 12, 0, 0]
 '''
+"""
+nums = [0,1,0,3,12]
+o/p = [1,3,12,0,0]
+"""

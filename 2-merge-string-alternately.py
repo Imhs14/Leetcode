@@ -2,7 +2,6 @@
 # Complexity : Time: O(N + M), Space: O(N + M)
 # Topic/Category : Two Pointers
 # Difficulty : Easy
-
 class Solution:
     def mergeAlternately(self, word1: str , word2: str)-> str:
         A, B = len(word1), len(word2)
@@ -23,7 +22,6 @@ class Solution:
         while a < A:
             s.append(word1[a])
             a += 1
-
         while b < B:
             s.append(word2[b])
             b += 1
@@ -32,20 +30,20 @@ class Solution:
 word1,word2 = input().split()
 sol = Solution()
 print(sol.mergeAlternately(word1,word2))
-
 """
 I/P-O/P :
 heera shanker
 hsehearnaker
 """
-
-'''
-word1 =
+'''word1 =
 "abc"
-
 word2 =
 "pqr"
-
 Output
 "apbqcr"
 '''
+"""
+word1 = "abc"
+word2 = "pqr"
+o/p = "apbqcr"
+"""

@@ -2,7 +2,6 @@
 # Complexity : Time: O(N), Space: O(1)
 # Topic/Category : Two Pointers
 # Difficulty : Easy
-
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
         k = 0
@@ -11,9 +10,7 @@ class Solution:
                 nums[k] = nums[i]
                 k += 1
         return k           
-
 # Time  = O(n), Space = O(1), Solved using Two pointer 
-
 """
 nums =
 [0,1,2,2,3,0,4,2]
@@ -21,7 +18,6 @@ val =
 2
 Output = [0,1,4,0,3] 
 """
-
 """ My solution at first 
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
@@ -35,14 +31,15 @@ class Solution:
                 i += 1
         
 """
-
-'''
-nums =
+'''nums =
 [3, 2, 2, 3]
-
 val =
 3
-
 Output
 2
 '''
+"""
+nums = [3,2,2,3]
+val = 3
+o/p = 2
+"""

@@ -2,7 +2,6 @@
 # Complexity : Time: O(N), Space: O(N)
 # Topic/Category : Stacks
 # Difficulty : Easy
-
 class Solution:
     def isValid(self, s: str) -> bool:
         # Mapping of closing bracket to opening bracket
@@ -20,11 +19,12 @@ class Solution:
         
         # Valid only if all brackets were matched (stack is empty)
         return len(stack) == 0
-
-'''
-s =
+'''s =
 "()[]{}"
-
 Output
 True
 '''
+"""
+s = "()[]{}"
+o/p = True
+"""

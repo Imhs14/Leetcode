@@ -8,3 +8,7 @@ class Solution:
             prev = ad
         return res
 # Time = O(n), Space  = O(n)
+"""
+nums = [1,2,3,4]
+o/p = [1,3,6,10]
+"""

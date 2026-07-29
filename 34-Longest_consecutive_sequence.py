@@ -11,5 +11,8 @@ class Solution:
                     next_num += 1
                 longest = max(longest, length)
         return longest
-
 # Time = O(n), Space = O(n)
+"""
+nums = [100,4,200,1,3,2]
+o/p = 4
+"""

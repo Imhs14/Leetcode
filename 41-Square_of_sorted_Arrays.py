@@ -12,7 +12,9 @@ class Solution:
                 r -= 1
         
         res.reverse()
-
         return res
-
 # Time = O(n), Space = O(n) 
+"""
+nums = [-4,-1,0,3,10]
+o/p = [0,1,9,16,100]
+"""

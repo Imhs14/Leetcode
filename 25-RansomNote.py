@@ -12,16 +12,13 @@ class Solution:
                 counter[c] = 1
             
         for c in ransomNote:
-
             if c not in counter:
                 return False
             elif counter[c] == 1:
                 del counter[c]
             else:
                 counter[c] -= 1
-
         return True 
-
 """
 Alternate ways of solving it
 case : 1
@@ -33,17 +30,14 @@ class Solution:
                 return False
             letters[letter] -= 1
         return True
-
 case : 2
 from collections import Counter
-
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
         for char in set(ransomNote):
             if ransomNote.count(char) > magazine.count(char):
                 return False
         return True
-
 case : 3
 class Solution:
     def canConstruct(self, ransomNote: str, magazine: str) -> bool:
@@ -56,14 +50,15 @@ class Solution:
                 return False
         return True
 """ 
-
-'''
-ransomNote =
+'''ransomNote =
 "a"
-
 magazine =
 "b"
-
 Output
 False
 '''
+"""
+ransomNote = "a"
+magazine = "b"
+o/p = False
+"""

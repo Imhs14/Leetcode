@@ -3,7 +3,6 @@ class Solution:
         nums.sort()
         n = len(nums)
         ans = []
-
         for i in range(n):
             if nums[i] > 0:
                 break 
@@ -26,3 +25,8 @@ class Solution:
                     lo += 1
         return ans
 # Time = O(n^2), Space = O(n)
+
+"""
+nums = [-1,0,1,2,-1,-4]
+o/p = [[-1,-1,2],[-1,0,1]]
+"""

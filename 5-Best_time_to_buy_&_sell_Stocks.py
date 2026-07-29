@@ -2,7 +2,6 @@
 # Complexity : Time: O(N), Space: O(1)
 # Topic/Category : Sliding Window
 # Difficulty : Easy
-
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         min_price = prices[0]
@@ -15,13 +14,13 @@ class Solution:
             if profit > max_profit:
                 max_profit = profit 
         return max_profit
-
-'''
-prices =
+'''prices =
 [7, 1, 5, 3, 6, 4]
-
 Output
 5
 '''
 
-
+"""
+prices = [7,1,5,3,6,4]
+o/p = 5
+"""

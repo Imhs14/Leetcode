@@ -2,7 +2,6 @@
 # Complexity : Time: O(N * M), Space: O(1)
 # Topic/Category : Strings
 # Difficulty : Easy
-
 class Solution:
     def longestCommonPrefix(self, strs: List[str]) -> str:
         seen = ''
@@ -13,11 +12,12 @@ class Solution:
             
             seen += (strs[0][positions])
         return seen
-
-'''
-strs =
+'''strs =
 ["flower", "flow", "flight"]
-
 Output
 "fl"
 '''
+"""
+strs = ["flower","flow","flight"]
+o/p = "fl"
+"""

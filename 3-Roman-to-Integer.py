@@ -2,7 +2,6 @@
 # Complexity : Time: O(N), Space: O(1)
 # Topic/Category : Math
 # Difficulty : Easy
-
 class Solution:
     def romanToInt(self, s: str) -> int:
         val = {'I': 1, 'V': 5, 'X': 10, 'L': 50,
@@ -17,12 +16,10 @@ class Solution:
                 n += cur 
                 prev = cur 
         return n 
-
 if __name__ == '__main__':
     s = input("")
     obj = Solution()
     print(obj.romanToInt(s))
-
 # eg MCMXCIV
 ''' Symbol	curr	prev	curr < prev?	Action	Running Total
       V	     5	     0   	     No	         +5	        5   
@@ -32,17 +29,17 @@ if __name__ == '__main__':
       M	     1000	 10	          No	     +1000	    1094
       C	     100	1000	      Yes	      -100	     994
       M	     1000	100	           No	      +1000	     1994 
-'''
-"""
+'''"""
 eg i/p & o/p :
 "III"
 3 
 """
-
-'''
-s =
+'''s =
 "MCMXCIV"
-
 Output
 1994
 '''
+"""
+s = "III"
+o/p = 3
+"""

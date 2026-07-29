@@ -33,7 +33,6 @@ class Solution:
                         s.add(item)
         return True
 
-
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         s = set(nums)
@@ -48,7 +47,6 @@ class Solution:
             result = max(longest, length)
         return result
     
-
 from collections import defaultdict
 from typing import List
 class Solution:

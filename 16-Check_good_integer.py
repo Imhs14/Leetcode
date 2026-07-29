@@ -2,7 +2,6 @@
 # Complexity : Time: O(D), Space: O(D)
 # Topic/Category : Math
 # Difficulty : Easy
-
 class Solution:
     def checkGoodInteger(self, n: int) -> bool:
         dig_sum, sq_sum = 0, 0
@@ -14,11 +13,12 @@ class Solution:
             sq_sum += a*a
         
         return  sq_sum - dig_sum >= 50 
-
-'''
-n =
+'''n =
 1234
-
 Output
 True
 '''
+"""
+num = "6777133339"
+o/p = "777"
+"""

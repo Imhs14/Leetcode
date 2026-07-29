@@ -13,11 +13,8 @@ class Solution:
                 return True # even if we detected a 1 duplicate just return True 
         return res
     # Time , Space =  O(n)
-
-
 """
 Another way to solve it 
-
 s = set()
 for num in nums:
     if num in s:
@@ -25,16 +22,15 @@ for num in nums:
     else:
         return False
 return False
-
 Another way to solve it but not efficient, in this we do not have an early exit 
-
 return (len(nums) != len(set(nums))) 
 """
-
-'''
-nums =
+'''nums =
 [1, 2, 3, 1]
-
 Output
 True
 '''
+"""
+nums = [1,2,3,1]
+o/p = True
+"""

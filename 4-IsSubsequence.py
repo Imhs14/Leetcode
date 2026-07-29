@@ -2,14 +2,12 @@
 # Complexity : Time: O(T), Space: O(1)
 # Topic/Category : Two Pointers
 # Difficulty : Easy
-
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         S = len(s)
         T = len(t)
         if S == '' : return True
         if S > T : return False
-
         j = 0
         for i in range(T):
             if t[i] == s[j]:
@@ -23,9 +21,7 @@ if __name__ == '__main__':
     s = input()
     t = input()
     print(p1.isSubsequence(s,t))
-
-'''
-some other ways of solving it
+'''some other ways of solving it
 way = 1
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
@@ -44,24 +40,22 @@ class Solution:
         class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
         first = 0  # индекс по s
-
         for second in range(len(t)):  # идем по t
             if first < len(s) and s[first] == t[second]:
                 first += 1
-
             if first == len(s):
                 return True
-
         return first == len(s)
 '''
-
-'''
-s =
+'''s =
 "abc"
-
 t =
 "ahbgdc"
-
 Output
 True
 '''
+"""
+s = "abc"
+t = "ahbgdc"
+o/p = True
+"""

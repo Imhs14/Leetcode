@@ -7,5 +7,8 @@ class Solution:
             else:
                 X -= 1
         return X
-
 # Tine = O(n), Space = O(n)
+"""
+operations = ["--X","X++","X++"]
+o/p = 1
+"""

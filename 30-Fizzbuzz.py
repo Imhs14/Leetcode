@@ -11,3 +11,7 @@ class Solution:
             else:
                 op.append(str(n))
         return op
+"""
+n = 3
+o/p = ["1","2","Fizz"]
+"""

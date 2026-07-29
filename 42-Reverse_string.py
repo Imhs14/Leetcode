@@ -7,5 +7,8 @@ class Solution:
         for i in range(len(s) // 2):
                 s[i], s[j] = s[j], s[i]
                 j -= 1    
-
 # Time = O(N), Space = O(1)
+"""
+s = ["h","e","l","l","o"]
+o/p = ["o","l","l","e","h"]
+"""
