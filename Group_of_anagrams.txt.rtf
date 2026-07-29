@@ -1,0 +1,68 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2870
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red173\green176\blue178;\red15\green16\blue16;\red189\green198\blue208;
+\red202\green202\blue202;\red67\green192\blue160;\red183\green111\blue179;\red253\green149\blue70;\red167\green197\blue152;
+\red198\green146\blue255;\red150\green204\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c73333\c74510\c74902;\cssrgb\c7059\c7451\c7843;\cssrgb\c78824\c81961\c85098;
+\cssrgb\c83137\c83137\c83137;\cssrgb\c30588\c78824\c69020;\cssrgb\c77255\c52549\c75294;\cssrgb\c100000\c65098\c34118;\cssrgb\c70980\c80784\c65882;
+\cssrgb\c82353\c65882\c100000;\cssrgb\c64706\c83922\c100000;}
+\margl1440\margr1440\vieww20400\viewh11100\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\qc\partightenfactor0
+
+\f0\fs26 \cf0 Question : 49  Group of Anagrams\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf0 First create a defaultdict then assign an anagrams dict i.e key value pairs. -> keys are being assigned to list of strings(Values)\
+\
+The idea is if we sort the string\'92s key in such a way that all the words with the same required alphabets to build them have same keys \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2  \cf4 \strokec4 anagrams_dict\cf2 \strokec2  \cf5 \strokec5 =\cf2 \strokec2  \cf6 \cb3 \strokec6 defaultdict\cf2 \cb3 \strokec2 (\cf6 \cb3 \strokec6 list\cf2 \cb3 \strokec2 )\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+We will use ord(\'91char\'92) this is from ASCII which has number to each of the letter a = 97, b= 98 and so on\'85.\
+\
+So we will create a count (our key) it will be equal to 0 multiplied 26 times. [0,0,0,0,0,0,0,0,0,0,0\'85\'85\'85.]\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf7 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 for\cf2 \strokec2  \cf4 \strokec4 s\cf2 \strokec2  \cf7 \strokec7 in\cf2 \strokec2  \cf8 \strokec8 strs\cf2 \strokec2 : \cb1 \
+\cb3             \cf4 \strokec4 count\cf2 \strokec2  \cf5 \strokec5 =\cf2 \strokec2  [\cf9 \strokec9 0\cf2 \strokec2 ] \cf5 \strokec5 *\cf2 \strokec2  \cf9 \strokec9 26\cf2 \cb1 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+\
+And we will assign 1 if we encounter that letter for suppose we\'92ve seen char \'93a\'94 so [1,0,0,0,0,0,0\'85.] Next we encounter another letter and at that place we will update it with 1. \
+\
+Here default dict will be very useful as if a letter is not present as we ask for it , It won\'92t crash and it will create that letter and assign 0 to it.\
+\
+And in our code we are adding one.\
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf7 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec7 for\cf2 \strokec2  \cf4 \strokec4 c\cf2 \strokec2  \cf7 \strokec7 in\cf2 \strokec2  \cf4 \strokec4 s\cf2 \strokec2 :\cb1 \
+\cb3                 \cf4 \strokec4 count\cf2 \strokec2 [\cf10 \cb3 \strokec10 ord\cf2 \cb3 \strokec2 (\cf4 \strokec4 c\cf2 \strokec2 ) \cf5 \strokec5 -\cf2 \strokec2  \cf10 \cb3 \strokec10 ord\cf2 \cb3 \strokec2 (\cf11 \cb3 \strokec11 "a"\cf2 \cb3 \strokec2 )] \cf5 \strokec5 +=\cf2 \strokec2  \cf9 \strokec9 1\cf2 \cb1 \strokec2 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+So in order for us to use hashing we need to make the count into an immutable object I.e is a tuple. Is count remains to be a list which is mutable we cannot proceed\
+ Further it keeps throwing the errors \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs24 \cf4 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 key\cf2 \strokec2  \cf5 \strokec5 =\cf2 \strokec2  \cf6 \cb3 \strokec6 tuple\cf2 \cb3 \strokec2 (\cf4 \strokec4 count\cf2 \strokec2 )\cb1 \
+\cb3             \cf4 \strokec4 anagrams_dict\cf2 \strokec2 [\cf4 \strokec4 key\cf2 \strokec2 ].\cf10 \cb3 \strokec10 append\cf2 \cb3 \strokec2 (\cf4 \strokec4 s\cf2 \strokec2 )\cb1 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 \
+So eat, ate, tea will have same set of count as the key which is count will have value at a = 1, e = 1, t = 1 and rest 0 .\
+\
+Here default dict will play a crucial role as it encounters the same key but value different it will be appended to eat, then tea , then ate\'85\
+\
+\
+}
