@@ -51,6 +51,6 @@
     <g transform="translate(380, 135)">
         <rect class="box" x="0" y="0" width="180" height="40" />
         <text x="15" y="25" class="text-large text-hard">Hard</text>
-        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">2</tspan><tspan fill="#8c8c8c" font-size="14px">/947</tspan></text>
+        <text x="165" y="25" class="text-large" text-anchor="end"><tspan fill="#fff">3</tspan><tspan fill="#8c8c8c" font-size="14px">/947</tspan></text>
     </g>
 </svg>

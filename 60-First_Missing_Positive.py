@@ -21,7 +21,7 @@ class Solution:
         for i in range(n):
             if nums[i] > n and nums[i] <= 0:
                 nums[i] = n + 1
-                
+
         # Loop 2: mark the presence — negate nums[num-1] if num is in range
         for i in range(n):
             num = abs(nums[i])
@@ -35,3 +35,5 @@ class Solution:
             if nums[i] > 0:
                 return i + 1
         return n + 1
+
+# Time = O(n), Space = O(1)
