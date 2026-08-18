@@ -1,3 +1,7 @@
+# Question : 49. Group Anagrams
+# Complexity : Time: O(N * M), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Medium
 from collections import defaultdict
 from typing import List
 class Solution:

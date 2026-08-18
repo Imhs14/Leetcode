@@ -1,3 +1,7 @@
+# Question : 724. Find Pivot Index
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Arrays & Prefix Sum
+# Difficulty : Easy
 class Solution:
     def pivotIndex(self, nums: List[int]) -> int:
         total = sum(nums)

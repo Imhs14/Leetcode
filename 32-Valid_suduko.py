@@ -1,3 +1,7 @@
+# Question : 36. Valid Sudoku
+# Complexity : Time: O(N^2), Space: O(N^2)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Medium
 class Solution:
     def isValidSudoku(self, board: List[List[str]]) -> bool:
         # Validate Rows

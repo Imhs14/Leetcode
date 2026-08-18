@@ -1,3 +1,7 @@
+# Question : 1480. Running Sum of 1d Array
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays & Prefix Sum
+# Difficulty : Easy
 class Solution:
     def runningSum(self, nums: List[int]) -> List[int]:
         res = []

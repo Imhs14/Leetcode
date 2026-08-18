@@ -1,3 +1,7 @@
+# Question : 2520. Count the Digits That Divide a Number
+# Complexity : Time: O(D), Space: O(1)
+# Topic/Category : Math
+# Difficulty : Easy
 class Solution:
     def countDigits(self, num: int) -> int:
         a = str(num)

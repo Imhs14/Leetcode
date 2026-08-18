@@ -1,3 +1,7 @@
+# Question : 128. Longest Consecutive Sequence
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Medium
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
         s = set(nums)

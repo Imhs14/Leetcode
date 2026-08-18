@@ -1,3 +1,7 @@
+# Question : 977. Squares of a Sorted Array
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Two Pointers
+# Difficulty : Easy
 class Solution:
     def sortedSquares(self, nums: List[int]) -> List[int]:
         l = 0

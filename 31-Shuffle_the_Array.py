@@ -1,3 +1,7 @@
+# Question : 1470. Shuffle the Array
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays
+# Difficulty : Easy
 class Solution:
     def shuffle(self, nums: List[int], n: int) -> List[int]:
         res = []

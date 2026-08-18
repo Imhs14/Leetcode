@@ -1,3 +1,7 @@
+# Question : 2114. Maximum Number of Words Found in Sentences
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Strings
+# Difficulty : Easy
 class Solution:
     def mostWordsFound(self, sentences: List[str]) -> int:
         mcx = 0

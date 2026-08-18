@@ -1,19 +1,7 @@
-class Solution:
-    def firstMissingPositive(self, nums: List[int]) -> int:
-        hsh = {}
-        j = 1
-        for i in range(len(nums)):
-            hsh[nums[i]] = j
-            j += 1
-    
-        for i in range(1,len(nums)+1):
-            if i not in hsh:
-                return i
-            elif i == len(nums):
-                return len(nums) +1
-
-# Time = O(n), Space = O(n)
-
+# Question : 41. First Missing Positive
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Hard
 class Solution:
     def firstMissingPositive(self, nums: List[int]) -> int:
         n = len(nums)

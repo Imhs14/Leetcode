@@ -1,3 +1,7 @@
+# Question : 1512. Number of Good Pairs
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays & Hashing
+# Difficulty : Easy
 class Solution:
     def numIdenticalPairs(self, nums: List[int]) -> int:
         output = 0

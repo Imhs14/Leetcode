@@ -1,3 +1,7 @@
+# Question : 309. Best Time to Buy and Sell Stock with Cooldown
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Dynamic Programming / Greedy
+# Difficulty : Medium
 def maxProfit(prices: List[int]) -> int:
         maxx_profit = 0
         n = len(prices)

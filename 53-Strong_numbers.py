@@ -1,3 +1,7 @@
+# Question : GFG. Strong Number
+# Complexity : Time: O(D), Space: O(1)
+# Topic/Category : Math
+# Difficulty : Easy
 import math
 class Solution:
     def isStrong(self, n):

@@ -1,3 +1,7 @@
+# Question : 80. Remove Duplicates from Sorted Array II
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Two Pointers
+# Difficulty : Medium
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
         k = 2

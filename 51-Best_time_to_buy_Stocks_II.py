@@ -1,3 +1,7 @@
+# Question : 122. Best Time to Buy and Sell Stock II
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Greedy
+# Difficulty : Medium
 class Solution:
     def maxProfit(self, prices: List[int]) -> int:
         max_profit = 0

@@ -1,3 +1,7 @@
+# Question : 412. Fizz Buzz
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Math
+# Difficulty : Easy
 class Solution:
     def fizzBuzz(self, n: int) -> List[str]:
         op = []

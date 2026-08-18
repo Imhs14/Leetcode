@@ -1,3 +1,7 @@
+# Question : 1431. Kids With the Greatest Number of Candies
+# Complexity : Time: O(N), Space: O(N)
+# Topic/Category : Arrays
+# Difficulty : Easy
 class Solution:
     def kidsWithCandies(self, candies: List[int], extraCandies: int) -> List[bool]:
         res = []

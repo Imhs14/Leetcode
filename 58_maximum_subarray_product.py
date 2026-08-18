@@ -1,19 +1,7 @@
-def maxProduct(nums: List[int]) -> int:
-    n = len(nums)
-    max_prod = nums[0]
-    prev_max = prev_min = nums[0]
-
-    for i in range(1,n):
-
-        prev_max,prev_min = max(nums[i], prev_min * nums[i], prev_max * nums[i]), min(nums[i], prev_min * nums[i], prev_max * nums[i])
-
-        print('pr_mx:',prev_max,'pr_mn:',prev_min)
-
-        max_prod = max(max_prod,prev_min,prev_max)
-        print(max_prod)
-    return max_prod
-print(maxProduct([-2,0]))
-
+# Question : 152. Maximum Product Subarray
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Dynamic Programming
+# Difficulty : Medium
 class Solution:
     def maxProduct(self, nums: List[int]) -> int:
 

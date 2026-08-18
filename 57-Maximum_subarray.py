@@ -1,3 +1,7 @@
+# Question : 53. Maximum Subarray
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Dynamic Programming / Kadane's Algorithm
+# Difficulty : Medium
 class Solution:
     def maxSubArray(self, nums: List[int]) -> int:
 

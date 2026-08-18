@@ -1,3 +1,7 @@
+# Question : 15. 3Sum
+# Complexity : Time: O(N^2), Space: O(N)
+# Topic/Category : Two Pointers
+# Difficulty : Medium
 class Solution:
     def threeSum(self, nums: list[int]) -> list[list[int]]:
         nums.sort()

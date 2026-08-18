@@ -1,3 +1,7 @@
+# Question : 167. Two Sum II - Input Array Is Sorted
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Two Pointers
+# Difficulty : Medium
 from collections import defaultdict
 class Solution:
     def twoSum(self, numbers: List[int], target: int) -> List[int]:

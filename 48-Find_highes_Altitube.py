@@ -1,3 +1,7 @@
+# Question : 1732. Find the Highest Altitude
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Arrays & Prefix Sum
+# Difficulty : Easy
 class Solution:
     def largestAltitude(self, gain: List[int]) -> int:
         n = len(gain)

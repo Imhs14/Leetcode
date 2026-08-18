@@ -1,3 +1,7 @@
+# Question : 2011. Final Value of Variable After Performing Operations
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Arrays & Simulation
+# Difficulty : Easy
 class Solution:
     def finalValueAfterOperations(self, operations: List[str]) -> int:
         X = 0
