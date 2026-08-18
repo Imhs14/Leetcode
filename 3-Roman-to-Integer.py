@@ -11,7 +11,7 @@ class Solution:
         for x in s[::-1]:
             cur = val[x]
             if cur < prev :
-                n -= cur
+                n -= cur        # prev isn't updated in that branch because it doesn't need to be — you're iterating right to left, so prev should always hold the largest value seen so far from the right.Think about why: when cur < prev, that means the current numeral is smaller than something to its right, so it's being subtracted (like the I in IV). But cur itself doesn't become the new "largest seen" — it's smaller than prev, so prev should stay exactly what it was.
             else:
                 n += cur 
                 prev = cur 
@@ -21,7 +21,8 @@ if __name__ == '__main__':
     obj = Solution()
     print(obj.romanToInt(s))
 # eg MCMXCIV
-''' Symbol	curr	prev	curr < prev?	Action	Running Total
+'''
+     Symbol	curr	prev	curr < prev?	Action	Running Total
       V	     5	     0   	     No	         +5	        5   
       I	     1	     5	         Yes	     -1         4
       C	     100	 1	          No	     +100	    104
@@ -29,7 +30,8 @@ if __name__ == '__main__':
       M	     1000	 10	          No	     +1000	    1094
       C	     100	1000	      Yes	      -100	     994
       M	     1000	100	           No	      +1000	     1994 
-'''"""
+'''
+"""
 eg i/p & o/p :
 "III"
 3 
