@@ -17,7 +17,7 @@ class Solution:
     # storage = o(1)
 # below part is not required in leet code
 nums = list(map(int, input().split()))  # you'd handle input yourself
-sol = solution()
+sol = Solution()
 print(sol.findclosestnumber(nums))
 '''nums =
 [-4, -2, 1, 4, 8]
