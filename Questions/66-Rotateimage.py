@@ -1,4 +1,9 @@
 # Build the matrix by reading line by line until End Of File (EOF)
+# Question : Rotate 90 degree
+# Complexity : Time: O(R x C), Space: O(1)
+# Topic/Category : Array
+# Difficulty : Easy
+# Question Link : https://www.geeksforgeeks.org/problems/rotate-by-90-degree-1587115621/1
 matrix = []
 while True:
     try:

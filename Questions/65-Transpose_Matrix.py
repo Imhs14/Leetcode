@@ -1,3 +1,7 @@
+# Question : 867. Transpose Matrix
+# Complexity : Time: O(R x C), Space: O(R x C)
+# Topic/Category : Array, Matrix
+# Difficulty : Easy
 class Solution:
     def TransposeMatrix(self,matrix):
         fin = []
