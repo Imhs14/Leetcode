@@ -1,3 +1,7 @@
+# Question : 912. Sort an Array
+# Complexity : Time: O(N), Space: O(n)
+# Topic/Category : Array,Divide and Conquer,Sorting,Heap (Priority Queue),Merge Sort,Bucket Sort,Radix Sort,Counting Sort
+# Difficulty : Medium
 class Solution:
     def sortArray(self, nums: List[int]) -> List[int]:
         

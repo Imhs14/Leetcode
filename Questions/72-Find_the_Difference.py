@@ -1,19 +1,7 @@
-'''class Solution:
-    def findTheDifference(self, s: str, t: str) -> str:
-        hs = {}
-        for i in range(len(s)):
-            if s[i] not in hs.keys():
-                hs[s[i]] = 1
-            else:
-                hs[s[i]] += 1
-
-        for j in range(len(t)):
-            if t[j] not in hs:
-                return t[j]
-            elif t[j] in hs.keys():
-            
-                    return t[j]'''
-
+# Question : 389. Find the Difference
+# Complexity : Time: O(N), Space: O(1)
+# Topic/Category : Junior, Hash Table, String, Bit Manipulation,Sorting
+# Difficulty : Easy
 class Solution:
     def findTheDifference(self, s: str, t: str) -> str:
         s_ad = 0
