@@ -12,6 +12,7 @@ class Solution:
         top, bottom = 0, len(matrix) - 1
         left, right = 0, len(matrix[0]) - 1
         total_elements = len(matrix) * len(matrix[0])
+        
         while len(result) < total_elements:
             # 1. Move Right along the top row
             for j in range(left, right + 1):
@@ -37,6 +38,10 @@ class Solution:
                     result.append(matrix[i][left])
                 left += 1  # Shrink left boundary
         return result
+
+p = Solution()
+
+print(p.spiralOrder([[1, 2, 3], [4 ,5 ,6], [7, 8, 9]])) # [1, 2, 3, 6, 9, 8, 7, 4, 5]
     
 ''' 
 Another way of solving it 
