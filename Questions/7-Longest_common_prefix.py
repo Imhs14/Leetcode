@@ -7,8 +7,9 @@ class Solution:
         seen = ''
         for positions in range(len(min(strs))):
             for string in strs:
+                print(string[positions],' ',strs[0][positions])
                 if string[positions] != strs[0][positions]:
-                    return ''
+                    return seen
             
             seen += (strs[0][positions])
         return seen
@@ -21,3 +22,5 @@ Output
 strs = ["flower","flow","flight"]
 o/p = "fl"
 """
+p = Solution()
+print(p.longestCommonPrefix(["flower", "flow", "flight"]))
